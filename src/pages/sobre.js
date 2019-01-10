@@ -24,7 +24,7 @@ export default class Sobre extends React.Component {
           Já no aspecto geral, procurarei falar sobre política (sob uma visão que você não está acostumado a ver um desenvolvedor falando), finanças, crônicas e o que mais eu achar que seja relevante externizar (embora você possa discordar e certamente eu possa me arrepender).
         </p>
         <p>
-          Este blog foi portado de Wordpress para <a href="https://www.gatsbyjs.org/">Gatsby</a> (graças a Deus). O código está disponível aqui.
+          Este blog foi portado de Wordpress para <a href="https://www.gatsbyjs.org/">Gatsby</a> (graças a Deus). O código está disponível <a href="https://github.com/rafaelquintanilha/blog">aqui</a>.
         </p>
         <p>
           Agora que você já sabe o que está fazendo aqui, <Link to="/">vá ler algo mais útil</Link>.
