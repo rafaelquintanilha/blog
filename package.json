@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-starter-blog",
-  "description": "Starter Gatsby Blog",
+  "name": "rafael-quintanilha-blog",
+  "description": "Rafael Quintanilha's personal blog",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Rafael Quintanilha <rafaelquintanilha@poli.ufrj.bt>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
+    "url": "https://github.com/rafaelquintanilha/blog/issues"
   },
   "dependencies": {
     "flag-icon-css": "^3.2.1",
@@ -44,7 +44,7 @@
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://rafaelquintanilha.com",
   "keywords": [
     "gatsby"
   ],
@@ -52,7 +52,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/rafaelquintanilha/blog.git"
   },
   "scripts": {
     "dev": "gatsby develop",

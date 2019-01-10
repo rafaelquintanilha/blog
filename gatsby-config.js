@@ -2,10 +2,13 @@ module.exports = {
   siteMetadata: {
     title: 'Rafael Quintanilha',
     author: 'Rafael Quintanilha',
-    description: 'Personal space for Rafael Quintanilha. Most tech. Bits of politics. Might have fiction.',
-    siteUrl: 'https://gatsby-starter-blog-demo.netlify.com/',
+    description: 'Personal space for Rafael Quintanilha. Most tech. Bits of politics. May have fiction.',
+    siteUrl: 'https://rafaelquintanilha.com',
+    social: {
+      twitter: '@rafaquint',
+    },
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -48,13 +51,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Rafael Quintanilha`,
+        short_name: `RQ Magazine`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#8c4b1a`,
         display: `minimal-ui`,
-        icon: `src/assets/gatsby-icon.png`,
+        icon: `src/assets/blog-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
