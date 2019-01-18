@@ -127,15 +127,11 @@ Your friend Jeff then approaches with a different opportunity: you invest inital
 
 That sounds good, but how good exactly? You then use the IRR formula you just learned in order to evaluate the _expected rate of growth_ for this project:
 
-$$
-0 = -10000 + \frac{11000}{(1 + r)} + \frac{12000}{(1 + r)^2} + \frac{13000}{(1 + r)^3} + \frac{14000}{(1 + r)^4} + \frac{15000}{(1 + r)^5}
-$$
+$0 = \frac{10000}{(1 + r)^0} + \frac{11000}{(1 + r)^1} + \frac{12000}{(1 + r)^2} + \frac{13000}{(1 + r)^3} + \frac{14000}{(1 + r)^4} + \frac{15000}{(1 + r)^5}$
 
 You quickly realize that things look more elegant if you let $x = \frac{1}{1 + r}$:
 
-$$
-15000x^5 + 14000x^4 + 13000x^3 + 12000x^2 + 11000x - 10000 = 0
-$$
+$15000x^5 + 14000x^4 + 13000x^3 + 12000x^2 + 11000x - 10000 = 0$
 
 Which is _quintic polynomial_. Well, you definitely know how to solve quadratic polynomials (your friend Bhaskhara), cubic polynomials ([Cardano-Tartaglia's](https://en.wikipedia.org/wiki/Cubic_function#Cardano's_method) method) and quartic polynomials ([which is ugly but doable](https://math.stackexchange.com/questions/785/is-there-a-general-formula-for-solving-4th-degree-equations-quartic)). But it happens that for 5th degree polynomials a fellow named [Évariste Galois](https://en.wikipedia.org/wiki/%C3%89variste_Galois) explains that you simply _can't_ have a nice formula (as Bhaskara is). [His ideas](https://en.wikipedia.org/wiki/Galois_theory) were used to proof the [Abel-Ruffini theorem](https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem) (Galois later died at age of 20 in a duel, but this is another story).
 
@@ -149,10 +145,9 @@ Among thousand other things, Newton figured out a way to find _roots_ of an equa
 
 First, we are not trying to find _all_ solutions. We are specially interested on the solution that is _semantically coherent_, meaning that we should be able to put our discount rate in a fair range -- I know that Jeff's operation is expected to be lucrative, therefore $r > 0$. On the other hand, it's certainly not multiplying my capital by a factor of 5, so $r < 4$. Intuitively, then, $r$ must exist and be somewhere in the middle.
 
-Now consider the above polynomial as the function: 
-$$
-f(x) = 15000x^5 + 14000x^4 + 13000x^3 + 12000x^2 + 11000x - 10000
-$$
+Now consider the above polynomial as the function:
+
+$f(x) = 15000x^5 + 14000x^4 + 13000x^3 + 12000x^2 + 11000x - 10000$
 
 For $x = 0$ we have $f(0) = -10000$ and for $x = 1$ we have $f(1) = 55000$. What does that mean?
 
