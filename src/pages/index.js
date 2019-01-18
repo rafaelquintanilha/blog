@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import Layout from '../components/Layout';
 import { rhythm } from '../utils/typography';
 import 'flag-icon-css/css/flag-icon.css';
+import Footer from '../components/Footer';
 
 export default class BlogIndex extends React.Component {
   constructor() {
@@ -71,6 +72,8 @@ export default class BlogIndex extends React.Component {
             </div>
           )
         })}
+        <hr />
+        <Footer />
       </Layout>
     )
   }

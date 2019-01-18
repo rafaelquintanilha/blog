@@ -1,7 +1,7 @@
 ---
 title: Export your JSON data to CSV format
-date: "2015-06-18T00:00:00.000Z"
-lastReview: "2018-12-14T14:28:03-05:00"
+date: "2015-06-18"
+lastReview: "2018-12-14"
 spoiler: JSON is too nerdy. Real people want Excel.
 lang: en-us
 ---

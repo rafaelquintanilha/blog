@@ -1,7 +1,7 @@
 ---
 title: Introducing React Line Chart
-date: "2016-10-25T00:00:00.000Z"
-lastReview: "2019-01-07T12:50:03-05:00"
+date: "2016-10-25"
+lastReview: "2019-01-07"
 spoiler: Easily visualize your data with a customisable line chart.
 lang: en-us
 ---
@@ -22,7 +22,7 @@ You can check some of the features provided by the lib in the [live example](/ap
 
 In order to learn how to use this tool and to explain some of the design decisions I made, let’s build an app from scratch. Enough of talking, let’s get into it!
 
-## <a name="getting-started" href="#getting-started">Getting Started</a>
+## Getting Started
 
 We gonna take advantage of the [awesome Create React App](https://reactjs.org/blog/2016/07/22/create-apps-with-no-configuration.html) command. If you don’t know it, it’s time to visit the link and give it a head’s up. In any case there isn’t much to learn: all you need to do is run the following commands:
 
@@ -48,7 +48,7 @@ This will pull the latest version published on NPM. [You can check it online](ht
 
 Great! You have all the tooling ready to start (it’s beautiful how easy this section has become…)
 
-## <a name="the-basics" href="#the-basics">The Basics</a>
+## The Basics
 
 You can now navigate to *src/App.js* and get rid of everything is in there. Replace it with:
 
@@ -137,7 +137,7 @@ We are taking a slice of a dataset and feeding it into the `parseFlatArray` func
 
 With this basic functionality we are able to draw multi-line charts pretty easy. Don’t forget to follow the [official documentation](https://github.com/rafaelquintanilha/react-linechart#parsers) to know every option you can take.
 
-## <a name="adding-legends" href="#adding-legends">Adding Legends</a>
+## Adding Legends
 
 Now that we have this chart it is time to customize it better. Notice there are three lines and we are unable to distinguish them. Would be nice to add a legend to help the viewer understand, huh? With React LineChart this is pretty easy – just add the `showLegends` prop to the component. Isn’t that great?
 
@@ -159,7 +159,7 @@ Change the component to:
 
 And check how easy is to place it somewhere it won’t bother the visualization. Again, follow the documentation to see how to change colors and names for each line.
 
-## <a name="adding-tooltips" href="#adding-tooltips">Adding Tooltips</a>
+## Adding Tooltips
 
 Tooltips are an important part of a line chart – they can provide additional information about a specific point. In order to make it easy, React LineChart comes with a default style for your tooltip and all you have to do is pass around the value you want to render.
 
@@ -173,7 +173,7 @@ onPointHover={(obj) => `x: ${obj.x}<br />y: ${obj.y}`}
 
 And it works! Now, while this is nice I admit the styling could be better (never got along with CSS to be fair). So I recommend you having a look at *styles.css* and search for `svg-line-chart-tooltip` to use it as a inspiration to create your own class and pass it as a prop called `tooltipClass`. Goes without saying that the class should be available to the file you are importing the LineChart component. In fact, don’t take any of my classes for granted – you can pass `labelClass` and `pointClass` as props as well.
 
-## <a name="using-dates" href="#using-dates">Using Dates</a>
+## Using Dates
 
 Numeric charts are great, right, but it’s also common to plot values against time. Turns out a date can be written as a timestamp, which ultimately is… a numeric value. With that in mind I created a special boolean `isDate` which will take your date input and plot right away!
 
@@ -181,13 +181,13 @@ Ok, not so fast. First you need to say how your date is structured and then how 
 
 After you have checked that this actually works, here is how this works: you can specify two functions, `xParser` and `xDisplay`, as properties of the component. The first should take whatever data format you have specified as x dimension and parse it in a numeric value. The latter will then receive this parsed value and display to the format best suits your visualization. Again, mind the consistency between your data and how you want to play with it.
 
-## <a name="derived-charts" href="#derived-charts">Derived Charts</a>
+## Derived Charts
 
 The ability of personalize the charts leads to an important fact: with the right props, a Line Chart can become another form of visualization. It is clear to see that using the hideLines prop we can generate an awesome scatter plot.
 
 As the time I am writing this post, the library exposes the `<ScatterPlot />` and `<StairChart />` components. The latter takes a data structure that must contain a start and an end date. Again I invite you to [have a look at the documentation](https://github.com/rafaelquintanilha/react-linechart#parsers). If you are still confused, recall the live demo.
 
-## <a name="final-thoughts" href="#final-thoughts">Final Thoughts</a>
+## Final Thoughts
 
 I am aware the lib is still lacking features, tests and error handling. I hope you can help me improve it [contributing on GitHub](https://github.com/rafaelquintanilha/react-linechart). Nonetheless I can say this tool has saved me a lot of time when displaying dynamic data in my projects. Don’t forget that this a experimental and really early release, so expect things to break (fork your own version if you want).
 

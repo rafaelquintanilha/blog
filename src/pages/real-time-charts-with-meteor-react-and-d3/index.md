@@ -1,7 +1,7 @@
 ---
 title: Real-Time Charts with Meteor, React and D3
-date: "2015-08-13T00:00:00.000Z"
-lastReview: "2018-12-27T11:28:03-05:00"
+date: "2015-08-13"
+lastReview: "2018-12-27"
 spoiler: Because we already have PNG for static graphs.
 lang: en-us
 ---
@@ -18,7 +18,7 @@ In order to make things nicer, we will develop a full-functional web application
 
 You might want to follow the code in [github](https://github.com/rafaelquintanilha/meteor-react-d3). Time to start!
 
-## <a name="designing-the-app" href="#designing-the-app">Designing the App</a>
+## Designing the App
 
 As React is component-based this step is important and may save you a lot of time in the future. The plan is to have two columns:
 
@@ -39,7 +39,7 @@ Finally, the blue rectangle is our star – the `BarChart` component. It will re
 
 Now time to dig into some code!
 
-## <a name="setting-up" href="#setting-up">Setting up the environment</a>
+## Setting up the environment
 
 This is the default step. In your console, type:
 
@@ -60,7 +60,7 @@ $ meteor add fortawesome:fontawesome
 
 The first is the official react package bundled by the Meteor Development Group. The second is [the official D3.js package for Meteor](https://atmospherejs.com/d3js/d3). We are doing some date manipulation, so [MomentJS](http://momentjs.com/) is a good choice. Fourth and fifth are Bootstrap and FontAwesome, just for styling purposes.
 
-## <a name="defining-the-collection" href="#defining-the-collection">Defining the Collection</a>
+## Defining the Collection
 
 Let’s begin defining the only server-side piece of our app (although it is also client-side in order to achieve [latency compensation](https://blog.meteor.com/optimistic-ui-with-meteor-67b5a78c3fcf)). In the top-level directory of your app, create a **collections.js** file and add the following:
 
@@ -86,7 +86,7 @@ Meteor.methods({
 
 We are defining our collection (Beers) and two methods which will be called in our components. Here, `insertBeers` takes the number of beers and the date, checks for inconsistencies and saves into the DB. On the other hand, `removeBeer` takes an id and removes the entry.
 
-## <a name="beerform-component" href="#beerform-component">BeerForm Component</a>
+## BeerForm Component
 
 This is the top panel of the left-side column and should be straightforward. Create a *client/* folder and **beerform.jsx** inside it. Then add the code:
 
@@ -153,7 +153,7 @@ Lines 4-5 get the DOM nodes of the fields through the ref attribute, passing in 
 Lines 11-12 we just clean the form up.
 Great! Our first component is done and we are able to insert data into our collection. Go to your browser console and type `Beers.find().fetch()` to see if it’s working. The only missing point is we haven’t defined where `BeerForm` will be rendered.
 
-## <a name="meteor-powered-react" href="#meteor-powered-react">Meteor-powered React</a>
+## Meteor-powered React
 
 It’s time for starting sketching our `App` component – which will render all components together. But before that we need to render the component, so create the files **client/index.html** and **client/init.jsx** and put the following:
 
@@ -228,7 +228,7 @@ While in Line 2 you tell React you are going to fetch data from your Meteor data
 
 The `BeerList` component is receiving whatever you have in `this.data.beers`, which in our case is the recently-fetched data from the `Beers` collection. Everything nice, let’s move forward.
 
-## <a name="beerlist-and-beeritem-components" href="#beerlist-and-beeritem-components">BeerList and BeerItem Components</a>
+## BeerList and BeerItem Components
 
 In **client/beerlist.jsx**:
 
@@ -292,7 +292,7 @@ Comments:
 
 See your work now on the browser. Our left column is done and you are able to insert elements through the form and delete any record simply by clicking on each item in the bottom panel.
 
-## <a name="mapping-data" href="#mapping-data">Mapping Data</a>
+## Mapping Data
 
 Before coding the `BarChart` component, it’s worthy to spare a couple minutes to think about its functionality and how we could reuse it in a future project. That’s what I thought for this case:
 
@@ -360,7 +360,7 @@ Differently from the `BeerList` component, here the data object is coming throug
 
 Everything set, let’s bring D3 to the show.
 
-## <a name="barchart-component" href="#barchart-component">BarChart Component</a>
+## BarChart Component
 
 Let’s code the state-of-art of reactive chart rendering. Create **client/barchart.jsx** and add:
 
@@ -490,7 +490,7 @@ If you are familiarized with D3, there’s nothing to worry about it. For those 
 
 And we are done! More important than the code is how to behave when integrating React and D3 – you first render the svg and then updates the elements (rect and text in this case) whenever your data changes.
 
-## <a name="summarizing" href="#summarizing">Summarizing</a>
+## Summarizing
 
 This was a very comprehensive and long tutorial. Take a time to digest everything but keep the notion that integrating Meteor, React and D3 shouldn’t be painful. Moreover, if you are careful when designing your components, they will be reusable from now on.
 

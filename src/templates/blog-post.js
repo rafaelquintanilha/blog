@@ -6,6 +6,8 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 
+import "katex/dist/katex.min.css"
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark

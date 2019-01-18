@@ -1,7 +1,7 @@
 ---
 title: Quando os Fatos Não Se Encaixam na Agenda
-date: "2018-11-02T00:00:00.000Z"
-lastReview: "2019-01-07T12:50:03-05:00"
+date: "2018-11-02"
+lastReview: "2019-01-07"
 spoiler: Ou "porquê virtue-signalling eventualmente revelará sua hipocrisia".
 lang: pt-br
 ---

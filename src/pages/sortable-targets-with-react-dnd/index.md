@@ -1,7 +1,7 @@
 ---
 title: Sortable Targets with React DnD
-date: "2016-03-13T00:00:00.000Z"
-lastReview: "2018-12-27T12:50:03-05:00"
+date: "2016-03-13"
+lastReview: "2018-12-27"
 spoiler: Let's add some order. Sort of.
 lang: en-us
 ---
@@ -14,7 +14,7 @@ The aim of this post is not to explain or advocate for React DnD (I’m positive
 
 But if you do want to know the insides, I got you covered: [there’s a reproducible repository](https://github.com/rafaelquintanilha/experiments/tree/master/sortable-target) set on GitHub.
 
-## <a name="the-problem" href="#the-problem">The Problem</a>
+## The Problem
 
 Imagine you have many elements and you want to drag and drop them into different containers. You are also asked to sort them. How one would solve this?
 
@@ -26,7 +26,7 @@ If you still are having problems picturing this – don’t worry! Check the exa
 
 Note that every container is a target. When dropping elements into other containers, they are pushed to the end. When inside, they are sorted. Pretty simple.
 
-## <a name="the-rationale" href="#the-rationale">The Rationale</a>
+## The Rationale
 
 I’ll not extend myself too much because there isn’t anything really new here. If you have understood the examples I cited before, you will have no trouble in following this. Saying that, my focus will be in how to go from the examples to the app I just presented.
 
@@ -40,7 +40,7 @@ Now should be simple to identify that we have one drag source (the `Card`) and t
 
 Let’s start from the beginning.
 
-## <a name="the-app-component" href="#the-app-component">The App Component</a>
+## The App Component
 
 This component is straightforward. Just render the Containers on the screen and give them some props. What props?
 
@@ -98,7 +98,7 @@ export default DragDropContext(HTML5Backend)(App);
 
 We are defining some style using [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), hardcoding our lists and creating our Containers. Note the last line, when we tell React that `App` is a `DragDropContext` with HTML5 Backend. [Check the docs](https://react-dnd.github.io/react-dnd/docs/backends/html5) if you want a more in-depth explanation.
 
-## <a name="the-container-component" href="#the-container-component">The Container Component</a>
+## The Container Component
 
 This is the main component, responsible for managing the state (cards currently inside him) and being a drop target.
 
@@ -243,7 +243,7 @@ There are some important things happening here:
 
 Now the last piece of the puzzle!
 
-## <a name="the-card-component" href="#the-card-component">The Card Component</a>
+## The Card Component
 Let’s start with the easy part: rendering and styling.
 
 ```jsx
@@ -401,7 +401,7 @@ export default flow(
 
 And we are done! Note we can spawn as many Containers as we like and this will still work.
 
-## <a name="final-considerations" href="#final-considerations">Final Considerations</a>
+## Final Considerations
 
 Don’t forget to check out the [repo](https://github.com/rafaelquintanilha/experiments/tree/master/sortable-target) set for this example. Have a good look at the source code and play around if you want.
 
