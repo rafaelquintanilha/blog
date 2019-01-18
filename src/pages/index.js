@@ -27,8 +27,9 @@ export default class BlogIndex extends React.Component {
         float: "right", 
         textAlign: "right"
         }}>
-        <label style={{marginRight: "10px"}}>Show:</label>
-        <select 
+        <label for="home-language-select" style={{marginRight: "10px"}}>Show:</label>
+        <select
+          id="home-language-select" 
           value={this.state.filter} 
           onChange={e => this.setState({filter: e.target.value})}>
           <option value="all">All</option>
