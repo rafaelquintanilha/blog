@@ -1,0 +1,16 @@
+.hint {
+  margin-top: 5px;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 14px;
+}
+
+.input {
+  width: 350px;
+}
+
+@media only screen and (max-width: 425px) {
+  .input {
+    width: 200px;
+  }
+}

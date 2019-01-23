@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container > header {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+
+.container > header > h1 {
+  margin-bottom: 10px;
+}
+
+.main {
+  flex: 1;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.main > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(200, 200, 200, 0.2);
+  font-size: 18px;
+}
+
+.footer > a {
+  text-decoration: none;
+  text-shadow: none;
+  background-image: none;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 425px) {
+  .main {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
