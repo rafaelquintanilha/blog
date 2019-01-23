@@ -31,7 +31,7 @@ As you can see, nothing fancy. For Requirement #4 we will need some extra math a
 
 ## The App
 
-All the code for this simulator can be found on [GitHub](https://github.com/rafaelquintanilha/blog/tree/master/src/pages/apps/irr-calculator).
+All the code for this simulator can be found on [GitHub](https://github.com/rafaelquintanilha/blog/tree/master/src/apps/irr-calculator).
 
 Here's a simulation for one of the examples given in [Making Better Investments with Math and JavaScript](https://rafaelquintanilha.com/making-better-investments-with-math-and-javascript/) (Elon's proposal). Compare it with the above requirements.
 
@@ -44,7 +44,6 @@ Let's start with the code (don't worry if you can't figure out what all lines ar
 ```jsx
 import React from 'react';
 import css from './index.module.css';
-import Helmet from 'react-helmet';
 import { IRR } from './util';
 import NumericInput from './NumericInput';
 import ModeSelector from './ModeSelector';
@@ -73,11 +72,6 @@ export default class Calculator extends React.Component {
   render() {
     return (
       <div className={css['container']}>
-        <Helmet
-          htmlAttributes={{lang: 'en'}}
-          meta={[{name: 'description', content: "Simulate the IRR of your investment"}]}
-          title={"IRR Calculator"}
-        />
         <header>
           <h1>IRR Calculator</h1>
         </header>
@@ -194,18 +188,6 @@ Finally notice that we create a ref and assign it to our `input`. More than that
 ```
 
 The ref created in the constructor is assigned to this `NumericInput`, the first input and the one we want to programatically trigger focus. By doing that, when we call `this.investmentInput.current`, instead of accessing the DOM element (as you may expect from [refs documentation](https://reactjs.org/docs/refs-and-the-dom.html)), we get a _component instance_ and therefore we can call `focus()`. This technique is also explained [here](https://reactjs.org/docs/refs-and-the-dom.html#adding-a-ref-to-a-class-component). Notice that this is [somewhat discouraged by the React team](https://reactjs.org/docs/refs-and-the-dom.html#exposing-dom-refs-to-parent-components), which advocates _ref forwarding_ instead. While I do agree with them, I believe one can make a case for simply adding a ref to the child (for example when the child component *needs* to be a class component).
-
----
-
-Back to the `render` function of `Calculator` you will also find `Helmet`, which basically adds a `<head>` tag to our document. [Check their documentation](https://github.com/nfl/react-helmet) if you want to know more.
-
-```jsx
-<Helmet
-  htmlAttributes={{lang: 'en'}}
-  meta={[{name: 'description', content: "Simulate the IRR of your investment"}]}
-  title={"IRR Calculator"}
-/>
-```
 
 Let's now dive into the projection modes.
 
@@ -410,6 +392,6 @@ The first highlighted line is `e.preventDefault`, which is a simple tricky to av
 
 ## Wrapping Up
 
-This was a quick overview of how to create an online tool that enables users to quickly simulate investments by calculating their IRR. Again, [check the full code in GitHub](https://github.com/rafaelquintanilha/blog/tree/master/src/pages/apps/irr-calculator) and play with the [live demo](/apps/irr-calculator).
+This was a quick overview of how to create an online tool that enables users to quickly simulate investments by calculating their IRR. Again, [check the full code in GitHub](https://github.com/rafaelquintanilha/blog/tree/master/src/apps/irr-calculator) and play with the [live demo](/apps/irr-calculator).
 
 Ideas of how to improve the simulation? PRs are welcome!
