@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a1705e4c-640e-4042-81d2-e21c76f4d0b5/deploy-status)](https://app.netlify.com/sites/rafaelquintanilha/deploys)
+
 # gatsby-starter-blog
 Gatsby starter for creating a blog
 
