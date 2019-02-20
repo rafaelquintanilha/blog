@@ -27,7 +27,7 @@ export default class BlogIndex extends React.Component {
         float: "right", 
         textAlign: "right"
         }}>
-        <label for="home-language-select" style={{marginRight: "10px"}}>Show:</label>
+        <label htmlFor="home-language-select" style={{marginRight: "10px"}}>Show:</label>
         <select
           id="home-language-select" 
           value={this.state.filter} 
