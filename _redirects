@@ -1,0 +1,6 @@
+# Redirect domain aliases to primary domain
+https://rafael.quintanilha.dev/* https://rafaelquintanilha.com/:splat 301!
+https://www.rafael.quintanilha.dev/* https://rafaelquintanilha.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://rafaelquintanilha.netlify.com/* https://rafaelquintanilha.com/:splat 301!
