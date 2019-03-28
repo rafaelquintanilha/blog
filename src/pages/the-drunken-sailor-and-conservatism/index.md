@@ -1,5 +1,5 @@
 ---
-title: The Drunken Sailor and Conservadorism
+title: The Drunken Sailor and Conservatism
 date: "2019-03-27"
 lastReview: "2019-03-27"
 spoiler: How an intriguing math problem can help us understand what means to be conservative.
@@ -161,9 +161,9 @@ The table is very informative -- if a sailor manages to survive until the 1000th
 
 The sailor is, therefore, Lindy. The longer he lives, the longer he is expected to live.
 
-## Conservadorism
+## Conservatism
 
-The Drunken Sailor Problem and the Lindy Effect help us understand what conservadorism is about. Sometimes, we want to be *progressives*, in a way that we expect changes to happen too fast. On the other hand, *conservatives* await for the *test of time*, for technologies and ideas that are *Lindy* and for sailors that are alive even though they've been drunk for a while.
+The Drunken Sailor Problem and the Lindy Effect help us understand what conservatism is about. Sometimes, we want to be *progressives*, in a way that we expect changes to happen too fast. On the other hand, *conservatives* await for the *test of time*, for technologies and ideas that are *Lindy* and for sailors that are alive even though they've been drunk for a while.
 
 Lindy enhances *evolution*. What survives tend to have offsprings that are alike. Things that change very quickly don't allow evolution do its job.
 
