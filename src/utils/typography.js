@@ -1,10 +1,7 @@
 import Typography from 'typography'
-//import Wordpress2016 from 'typography-theme-wordpress-2016'
-//import fairyGatesTheme from 'typography-theme-fairy-gates'
 import oceanBeachTheme from 'typography-theme-ocean-beach'
 
-oceanBeachTheme.baseFontSize = '21px';
-//oceanBeachTheme.bodyColor = 'hsla(0,0%,0%,0.88)';
+oceanBeachTheme.baseFontSize = '22px';
 
 oceanBeachTheme.overrideThemeStyles = () => ({
   'a.gatsby-resp-image-link': {
@@ -13,11 +10,15 @@ oceanBeachTheme.overrideThemeStyles = () => ({
     backgroundImage: 'none'
   },
   'a': {
-    color: "#8c4b1a"
+    color: "#003380",
+    backgroundImage: "linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, #003380 1px, #003380 2px, rgba(0, 0, 0, 0) 2px)",
   },
   'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a': {
     textShadow: 'none',
     backgroundImage: 'none'
+  },
+  'blockquote': {
+    borderLeft: "0.5925rem solid #003380"
   }
 })
 

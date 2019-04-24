@@ -1,26 +1,14 @@
 .menu {
   align-self: center;
-  margin-bottom: 30px;
+  font-size: 24px;
 }
 
-.concise,
 .container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
-}
-
-.title {
-  display: flex;
-}
-
-.title span {
-  position: relative;
-  top: 50px;
-  left: -83px;
-  font-style: italic;
 }
 
 .main {
@@ -30,70 +18,18 @@
   max-width: 900px;
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
-    justify-content: center;
-  }
-
-  .menu {    
-    margin-bottom: 0;
-  }
-}
-
 @media only screen and (max-width: 480px) {
-  .container {
-    justify-content: space-between;
-  }
-
-  .concise > * {
-    margin-bottom: 10px;
-  }
-  
-  .title {
-    align-items: center;
-  }
-
-  .title h1 {
-    font-size: 22px !important;
-    margin-bottom: 0 !important;
-  }
-
-  .title h3 {
-    font-size: 18px !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .title img {
-    width: 2.5rem !important;
-    height: 2.5rem !important;
-  }
-
-  .title span {
-    display: none;
-  }
-
   .main {
     padding: 15px 20px;
   }
-}
 
-@media only screen and (max-width: 375px) {
-  .title h1 {
-    font-size: 18px !important;
-  }
-
-  .menu {
-    font-size: 15px;
+  .menu {    
+    font-size: 18px;
   }
 }
 
 @media only screen and (max-width: 320px) {
-  .title h1 {
-    font-size: 16px !important;
-  }
-
-  .menu {
-    font-size: 14px;
+  .container {
+    justify-content: center;
   }
 }
