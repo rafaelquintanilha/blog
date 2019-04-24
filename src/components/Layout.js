@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import css from './Layout.module.css';
 
-import LOGO from './logo-horizontal-rq.png';
+import LOGO from './rq-logo-simple.svg';
+//import LOGO from './logo-horizontal-rq.png';
 import { rhythm } from '../utils/typography'
 
 export default class Layout extends React.Component {
