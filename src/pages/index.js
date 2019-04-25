@@ -94,11 +94,11 @@ export default class BlogIndex extends React.Component {
             },
             {
               property: 'og:image',
-              content: `${LOGO}`,
+              content: `${data.site.siteMetadata.siteUrl}${LOGO}`,
             },
             {
               property: 'twitter:image',
-              content: `${LOGO}`,
+              content: `${data.site.siteMetadata.siteUrl}${LOGO}`,
             },
             {
               property: 'og:image:width',
