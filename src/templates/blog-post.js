@@ -53,6 +53,10 @@ class BlogPostTemplate extends React.Component {
               content: post.frontmatter.spoiler,
             },
             {
+              property: 'og:type',
+              content: 'article',
+            },
+            {
               property: 'og:image',
               content: 'https://pbs.twimg.com/profile_images/1120880774482399236/XHIepMQC_400x400.png',
             },

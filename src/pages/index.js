@@ -64,6 +64,10 @@ export default class BlogIndex extends React.Component {
               content: siteTitle,
             },
             {
+              property: 'og:type',
+              content: 'website',
+            },
+            {
               property: 'og:description',
               content: siteDescription,
             },
@@ -85,11 +89,11 @@ export default class BlogIndex extends React.Component {
             },
             {
               property: 'og:image',
-              content: 'https://pbs.twimg.com/profile_images/1120880774482399236/XHIepMQC_400x400.png',
+              content: 'https://s2.glbimg.com/n09_BnQ3Hz8DbWKZZ_UbwkJQ7MQ=/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2017/B/i/Uh2Lg3QjaOJOLPJhsASQ/facebook.png',
             },
             {
               name: 'twitter:image',
-              content: 'https://pbs.twimg.com/profile_images/1120880774482399236/XHIepMQC_400x400.png',
+              content: 'https://s2.glbimg.com/n09_BnQ3Hz8DbWKZZ_UbwkJQ7MQ=/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2017/B/i/Uh2Lg3QjaOJOLPJhsASQ/facebook.png',
             },
           ]}
         />

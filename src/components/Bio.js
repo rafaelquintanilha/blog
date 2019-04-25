@@ -30,7 +30,7 @@ export default class Bio extends React.Component {
         <p>
           Written by <strong>Rafael Quintanilha</strong>, a Brazilian software engineer
           who enjoys writing about tech, politics and whatever comes to his mind.<br />
-          <a href="https://twitter.com/rafaquint">
+          <a href="https://twitter.com/rgsquintanilha">
             Twitter
           </a>
           {' - '}
