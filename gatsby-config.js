@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Rafael Quintanilha',
     author: 'Rafael Quintanilha',
-    description: 'Personal space for Rafael Quintanilha. Web Development. Front-end. React. UI/UX. Accessibility. May have politics.',
+    description: 'Personal space for Rafael Quintanilha. Web Development. Front-end. React. UI/UX. Accessibility.',
     siteUrl: 'https://rafaelquintanilha.com',
     social: {
       twitter: '@rgsquintanilha',

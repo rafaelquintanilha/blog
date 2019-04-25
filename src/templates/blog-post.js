@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 
 import "katex/dist/katex.min.css"
+import LOGO from "../assets/logo-square.png";
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -59,6 +60,26 @@ class BlogPostTemplate extends React.Component {
             {
               property: 'og:type',
               content: 'article',
+            },
+            {
+              property: 'og:image',
+              content: `${data.site.siteMetadata.siteUrl}${LOGO}`,
+            },
+            {
+              property: 'twitter:image',
+              content: `${data.site.siteMetadata.siteUrl}${LOGO}`,
+            },
+            {
+              property: 'og:image:width',
+              content: `512`,
+            },
+            {
+              property: 'og:image:height',
+              content: `512`,
+            },
+            {
+              property: 'keywords',
+              content: `react, frontend, web development, accessibility, a11y, ui, ux, design, technology`,
             },
           ]}
         />

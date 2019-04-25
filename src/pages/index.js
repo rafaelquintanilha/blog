@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import { rhythm } from '../utils/typography';
 import 'flag-icon-css/css/flag-icon.css';
 import Footer from '../components/Footer';
+import LOGO from "../assets/logo-square.png";
 
 export default class BlogIndex extends React.Component {
   constructor() {
@@ -90,6 +91,26 @@ export default class BlogIndex extends React.Component {
             {
               name: 'twitter:description',
               content: siteDescription,
+            },
+            {
+              property: 'og:image',
+              content: `${data.site.siteMetadata.siteUrl}${LOGO}`,
+            },
+            {
+              property: 'twitter:image',
+              content: `${data.site.siteMetadata.siteUrl}${LOGO}`,
+            },
+            {
+              property: 'og:image:width',
+              content: `512`,
+            },
+            {
+              property: 'og:image:height',
+              content: `512`,
+            },
+            {
+              property: 'keywords',
+              content: `react, frontend, web development, accessibility, a11y, ui, ux, design, technology`,
             },
           ]}
         />
