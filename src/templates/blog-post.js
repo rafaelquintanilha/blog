@@ -12,15 +12,55 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    const siteDescription = post.excerpt
+    const title = `${post.frontmatter.title} | ${siteTitle}`;
     const { previous, next } = this.props.pageContext
-
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`${post.frontmatter.title} | ${siteTitle}`}
+          title={title}
+          meta={[
+            {
+              name: 'description', 
+              content: post.frontmatter.spoiler,
+            },
+            {
+              property: 'og:url',
+              content: `${this.props.data.site.siteMetadata.siteUrl}${this.props.pageContext.slug}`,
+            },
+            {
+              property: 'og:title',
+              content: title,
+            },
+            {
+              property: 'og:description',
+              content: post.frontmatter.spoiler,
+            },
+            {
+              name: 'twitter:card',
+              content: 'summary',
+            },
+            {
+              name: 'twitter:creator',
+              content: this.props.data.site.siteMetadata.social.twitter,
+            },
+            {
+              name: 'twitter:title',
+              content: title,
+            },
+            {
+              name: 'twitter:description',
+              content: post.frontmatter.spoiler,
+            },
+            {
+              property: 'og:image',
+              content: 'https://pbs.twimg.com/profile_images/1120880774482399236/XHIepMQC_400x400.png',
+            },
+            {
+              name: 'twitter:image',
+              content: 'https://pbs.twimg.com/profile_images/1120880774482399236/XHIepMQC_400x400.png',
+            },
+          ]}
         />
         <h1>{post.frontmatter.title}</h1>
         <p
@@ -94,6 +134,9 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        social {
+          twitter
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -105,6 +148,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         lastReview(formatString: "MMMM DD, YYYY")
+        spoiler
       }
     }
   }

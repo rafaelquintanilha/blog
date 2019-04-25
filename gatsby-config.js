@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     title: 'Rafael Quintanilha',
     author: 'Rafael Quintanilha',
-    description: 'Personal space for Rafael Quintanilha. Most tech. Bits of politics. May have fiction.',
+    description: 'Personal space for Rafael Quintanilha. Web Development. Front-end. React. UI/UX. Accessibility. May have politics.',
     siteUrl: 'https://rafaelquintanilha.com',
     social: {
-      twitter: '@rafaquint',
+      twitter: '@rgsquintanilha',
     },
   },
   pathPrefix: '/',
@@ -54,9 +54,9 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Rafael Quintanilha`,
-        short_name: `Rafael Quintanilha`,
+        short_name: `RQ`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#003380`,
         theme_color: `#003380`,
         display: `minimal-ui`,
         icon: `src/assets/logo-square.png`,

@@ -49,8 +49,49 @@ export default class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
+          meta={[
+            {
+              name: 'description', 
+              content: siteDescription,
+            },
+            {
+              property: 'og:url',
+              content: data.site.siteMetadata.siteUrl,
+            },
+            {
+              property: 'og:title',
+              content: siteTitle,
+            },
+            {
+              property: 'og:description',
+              content: siteDescription,
+            },
+            {
+              name: 'twitter:card',
+              content: 'summary',
+            },
+            {
+              name: 'twitter:creator',
+              content: data.site.siteMetadata.social.twitter,
+            },
+            {
+              name: 'twitter:title',
+              content: siteTitle,
+            },
+            {
+              name: 'twitter:description',
+              content: siteDescription,
+            },
+            {
+              property: 'og:image',
+              content: 'https://pbs.twimg.com/profile_images/1120880774482399236/XHIepMQC_400x400.png',
+            },
+            {
+              name: 'twitter:image',
+              content: 'https://pbs.twimg.com/profile_images/1120880774482399236/XHIepMQC_400x400.png',
+            },
+          ]}
         />
         {this.filter}
         {posts
@@ -86,6 +127,10 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+        siteUrl
+        social {
+          twitter
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
