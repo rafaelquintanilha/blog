@@ -33,6 +33,10 @@ class BlogPostTemplate extends React.Component {
               content: title,
             },
             {
+              property: 'og:site_name',
+              content: title,
+            },
+            {
               property: 'og:description',
               content: post.frontmatter.spoiler,
             },
@@ -55,14 +59,6 @@ class BlogPostTemplate extends React.Component {
             {
               property: 'og:type',
               content: 'article',
-            },
-            {
-              property: 'og:image',
-              content: 'https://pbs.twimg.com/profile_images/1120880774482399236/XHIepMQC_400x400.png',
-            },
-            {
-              name: 'twitter:image',
-              content: 'https://pbs.twimg.com/profile_images/1120880774482399236/XHIepMQC_400x400.png',
             },
           ]}
         />
@@ -138,6 +134,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
         social {
           twitter
         }
