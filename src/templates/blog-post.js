@@ -63,11 +63,11 @@ class BlogPostTemplate extends React.Component {
             },
             {
               property: 'og:image',
-              content: `${data.site.siteMetadata.siteUrl}${LOGO}`,
+              content: `${LOGO}`,
             },
             {
               property: 'twitter:image',
-              content: `${data.site.siteMetadata.siteUrl}${LOGO}`,
+              content: `${LOGO}`,
             },
             {
               property: 'og:image:width',
