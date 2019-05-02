@@ -8,28 +8,28 @@ export default class About extends React.Component {
     return (
       <Layout location={this.props.location}>
         <h3>What's this?</h3>
+        <p><Link to="/sobre"><b>Disponível em Português.</b></Link></p>
         <p>
-          This blog is an attempt to keep a habit of regularly writing. When I started this project, the posts were technical, complex and huge, which happened to discourage myself to write more often. This time I'll focus on mantaining a more regularly updated space without decreasing quality (if that's even possible).
+          This blog is a dedicated space to the world of technology and web development. Here, I write about technologies that I'm using, apps that I'm developing, bugs that I have (or not) solved, and tricks that are worth sharing.
         </p>
         <p>
-          Hence, <b>Magazine</b>. A magazine where I gave myself permission to write, whatever it is, whenever I want. But don't worry my geek friend - I am a Software Engineer, so it is natural that my approaches have this bias.
+          As I create apps for the web since 2012, expect to find a lot about <i>JavaScript, React, Gatsby, UI, UX, accessibility, HTML, CSS</i> and <i>web development</i> in general. I also talk about <i>serverless, NodeJS, puppeteer, web automation, tests</i> and <i>databases</i>. If it goes to the web or is written in JavaScript, it can be here!
         </p>
         <p>
-          You'll see content in English and Portuguese. English because the reach is far bigger, in addition to helping me practice fluency. Portuguese because there is a lot to say, and it's often unsaid, in my mother tongue. As a rule of thumb, technical content will be in English and generalities in Portuguese.
+          In 2015 I co-founded <a href="https://elevential.com">Elevential</a>, a consulting IT company. Because of my experience since then, besides the technical content, expect articles about <i>business</i> in general, <i>entrepreneurship</i> and <i>teams</i> and <i>projects management</i>.
         </p>
         <p>
-          Technically speaking I intend to write about software in general, but specifically about <i>front-end</i>, <i>React</i>, <i>UI/UX</i>, <i>project management</i>, <i>entrepreneurship</i>, etc. Topics I can derive from my experience as web developer since 2012 and entrepreneur since 2015.
+          You will also find posts in English and Portuguese. Due to the bigger reach, posts which are more complete or "advanced" (in the sense of assuming previous knowledge from the reader) will be mostly in English. In Portuguese I will write basic content yet help spread out knowledge about web development for those who don't have a full domain of English.
         </p>
         <p>
-          Generally speaking I'll try to speak about politics (with a vision you are not used to see in a developer), finance, chronicles and whatever I find relevant (although you may disagree and I can certainly regret).
+          Discussions will go in my <a href="https://twitter.com/webquintanilha">Twitter</a>. Furthermore, I'll regularly post tips and previews of articles under development. Post suggestions? Questions about a specific article? Alternative solutions? Mistakes in the code? Just ping me on <a href="https://twitter.com/webquintanilha">@webquintanilha</a>.
         </p>
         <p>
-          This blog was ported from Wordpress to <a href="https://www.gatsbyjs.org/">Gatsby</a> (thank God). The code is available <a href="https://github.com/rafaelquintanilha/blog">here</a>.
+          All code shared in the articles are in GitHub, including the <a href="https://github.com/rafaelquintanilha/blog">source of this blog</a> (written in Gatsby and hosted on Netlify).
         </p>
         <p>
           Now you know what you are doing here, <Link to="/">go read something more useful</Link>.
         </p>
-        <p><Link to="/sobre"><b>Disponível em Português.</b></Link></p>
         <hr />
         <Bio />
       </Layout>

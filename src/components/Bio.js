@@ -28,9 +28,10 @@ export default class Bio extends React.Component {
           }}
         />
         <p>
-          Written by <strong>Rafael Quintanilha</strong>, a Brazilian software engineer
-          who enjoys writing about tech, politics and whatever comes to his mind.<br />
-          <a href="https://twitter.com/rgsquintanilha">
+          <strong>Rafael Quintanilha</strong> is a Brazilian software engineer
+          who enjoys writing about technology, web development, front-end, React, and 
+          whatever comes to his mind.<br />
+          <a href="https://twitter.com/webquintanilha">
             Twitter
           </a>
           {' - '}

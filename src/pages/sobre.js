@@ -8,28 +8,28 @@ export default class Sobre extends React.Component {
     return (
       <Layout location={this.props.location}>
         <h3>Mas o que é isso?</h3>
+        <p><Link to="/about"><b>Available in English.</b></Link></p>
         <p>
-          Este blog é uma tentativa de manter um hábito regular de escrita. Quando comecei esse projeto, os posts eram técnicos, complexos e grandes, o que por vezes acabavam me desestimulando a escrever. Dessa vez focarei em manter um espaço mais atualizado <i>sem</i> deixar cair a qualidade do conteúdo (se é que isso é possível).
+          Este blog é um espaço dedicado para o mundo da tecnologia e desenvolvimento web. Aqui, escrevo sobre tecnologias que esteja utilizando, apps que esteja desenvolvendo, bugs que eu tenha (ou não) resolvido, e tricks que valham a pena serem compartilhadas.
         </p>
         <p>
-          Daí, <b>Magazine</b>. Uma revista onde me dei permissão para escrever, sejá lá o que for, sempre que me der na telha. Mas calme meu amigo nerd - sou Engenheiro de Software por vocação, então é natural que minha abordagem sempre tenha esse viés.
+          Uma vez que eu crio apps para a web desde 2012, espere encontrar bastante sobre <i>JavaScript, React, Gatsby, UI, UX, acessibilidade, HTML, CSS</i> e <i>desenvolvimento web</i> em geral. Falarei também sobre <i>serverless, NodeJS, puppeteer, web automation, testes</i> e <i>banco de dados</i>. Se vai pra web ou é escrito em JavaScript, pode estar aqui!
         </p>
         <p>
-          Você verá também conteúdos em inglês e português. Inglês pois o alcance é consideravelmente maior, além de servir como prática de fluência. Português pois há muito a se dizer, e não é dito, na minha língua pátria. Via de regra, conteúdos técnicos serão em inglês, generalidades em português.
+          Em 2015, fui um dos fundadores da <a href="https://elevential.com">Elevential</a>, uma empresa de consultoria em Tecnologia da Informação. Por causa do conhecimento adquirido na área desde então, além do conteúdo técnico, espere artigos sobre <i>negócios</i> em geral, <i>empreendedorismo</i> e <i>gerenciamento de times e projetos</i>.
         </p>
         <p>
-          No aspecto técnico, pretendo escrever sobre software em geral, mas especificamente sobre <i>front-end</i>, <i>React</i>, <i>UI/UX</i>, <i>gerenciamento de projetos</i>, <i>empreendedorismo</i> e etc. Tópicos oriundos de minha experiência como desenvolvedor web desde 2012 e empreendedor desde 2015.
+          Você encontrará posts tanto em inglês quanto em português. Pelo alcance maior, posts mais completos e "avançados" (no sentido de pressupor um conhecimento prévio do leitor) serão majoritariamente em inglês. Em português escreverei conteúdos mais básicos mas que ajudem a disseminar conhecimento sobre desenvolvimento web para quem não domine tanto a língua inglesa. 
         </p>
         <p>
-          Já no aspecto geral, procurarei falar sobre política (sob uma visão que você não está acostumado a ver um desenvolvedor falando), finanças, crônicas e o que mais eu achar que seja relevante externizar (embora você possa discordar e certamente eu possa me arrepender).
+          Concentrarei as discussões sobre os posts no meu <a href="https://twitter.com/webquintanilha">Twitter</a>. Além disso, postarei dicas regularmente e prévias de artigos que estejam sendo preparados. Sugestões de post? Dúvida em algum artigo? Soluções alternativas? Erros no código? Vá em <a href="https://twitter.com/webquintanilha">@webquintanilha</a> e me mande uma mensagem.
         </p>
         <p>
-          Este blog foi portado de Wordpress para <a href="https://www.gatsbyjs.org/">Gatsby</a> (graças a Deus). O código está disponível <a href="https://github.com/rafaelquintanilha/blog">aqui</a>.
+          Todos os códigos presentes nos artigos estão no GitHub, inclusive o <a href="https://github.com/rafaelquintanilha/blog">código-fonte desde blog</a> (escrito em Gatsby e servido via Netlify).
         </p>
         <p>
           Agora que você já sabe o que está fazendo aqui, <Link to="/">vá ler algo mais útil</Link>.
         </p>
-        <p><Link to="/about"><b>Available in English.</b></Link></p>
         <hr />
         <Bio />
       </Layout>

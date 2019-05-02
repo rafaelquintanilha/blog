@@ -5,7 +5,7 @@ module.exports = {
     description: 'Personal space for Rafael Quintanilha. Web Development. Front-end. React. UI/UX. Accessibility.',
     siteUrl: 'https://rafaelquintanilha.com',
     social: {
-      twitter: '@rgsquintanilha',
+      twitter: '@webquintanilha',
     },
   },
   pathPrefix: '/',
@@ -54,12 +54,12 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Rafael Quintanilha`,
-        short_name: `RQuintanilha`,
+        short_name: `RQ`,
         start_url: `/`,
         background_color: `#003380`,
         theme_color: `#003380`,
         display: `minimal-ui`,
-        icon: `src/assets/rq-logo-512.svg`,
+        icon: `src/assets/rq-logo-square.svg`,
       },
     },
     `gatsby-plugin-offline`,
