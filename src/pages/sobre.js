@@ -25,7 +25,7 @@ export default class Sobre extends React.Component {
           Concentrarei as discussões sobre os posts no meu <a href="https://twitter.com/webquintanilha">Twitter</a>. Além disso, postarei dicas regularmente e prévias de artigos que estejam sendo preparados. Sugestões de post? Dúvida em algum artigo? Soluções alternativas? Erros no código? Vá em <a href="https://twitter.com/webquintanilha">@webquintanilha</a> e me mande uma mensagem.
         </p>
         <p>
-          Todos os códigos presentes nos artigos estão no GitHub, inclusive o <a href="https://github.com/rafaelquintanilha/blog">código-fonte desde blog</a> (escrito em Gatsby e servido via Netlify).
+          Todos os códigos presentes nos artigos estão no GitHub, inclusive o <a href="https://github.com/rafaelquintanilha/blog">código-fonte deste blog</a> (escrito em Gatsby e servido via Netlify).
         </p>
         <p>
           Agora que você já sabe o que está fazendo aqui, <Link to="/">vá ler algo mais útil</Link>.

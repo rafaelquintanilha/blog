@@ -161,3 +161,7 @@
    font-style: italic;
    font-size: 18px;
  }
+
+ blockquote {
+  border-left-color: #003380 !important;
+ }

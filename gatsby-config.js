@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Rafael Quintanilha',
     author: 'Rafael Quintanilha',
-    description: 'Personal space for Rafael Quintanilha. Web Development. Front-end. React. UI/UX. Accessibility.',
+    description: 'Posts about Web Development, Front-end, React, UI/UX, Accessibility.',
     siteUrl: 'https://rafaelquintanilha.com',
     social: {
       twitter: '@webquintanilha',
@@ -59,7 +59,7 @@ module.exports = {
         background_color: `#003380`,
         theme_color: `#003380`,
         display: `minimal-ui`,
-        icon: `src/assets/rq-logo-square.svg`,
+        icon: `src/assets/logo-square.svg`,
       },
     },
     `gatsby-plugin-offline`,
@@ -70,6 +70,7 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
-    `gatsby-plugin-twitter`
+    `gatsby-plugin-twitter`,
+    `gatsby-plugin-netlify`
   ],
 }

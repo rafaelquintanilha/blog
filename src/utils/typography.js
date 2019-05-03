@@ -17,9 +17,6 @@ oceanBeachTheme.overrideThemeStyles = () => ({
     textShadow: 'none',
     backgroundImage: 'none'
   },
-  'blockquote': {
-    borderLeft: "0.5925rem solid #003380"
-  }
 })
 
 delete oceanBeachTheme.googleFonts

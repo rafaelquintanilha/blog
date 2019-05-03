@@ -6,6 +6,7 @@ import { rhythm } from '../utils/typography';
 import 'flag-icon-css/css/flag-icon.css';
 import Footer from '../components/Footer';
 import LOGO from "../assets/logo-square.png";
+import css from './index.module.css';
 
 export default class BlogIndex extends React.Component {
   constructor() {
@@ -25,7 +26,6 @@ export default class BlogIndex extends React.Component {
         marginTop: "20px", 
         marginBottom: "20px", 
         width: "100%", 
-        float: "right", 
         textAlign: "right"
         }}>
         <label htmlFor="home-language-select" style={{marginRight: "10px"}}>Show:</label>
@@ -115,26 +115,29 @@ export default class BlogIndex extends React.Component {
           ]}
         />
         {this.filter}
-        {posts
-          .filter(({node}) => this.state.filter === "all" || node.frontmatter.lang === this.state.filter)
-          .map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3 style={{marginBottom: rhythm(1 / 4)}}>
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>{title}</Link>
-              </h3>
-              <small style={{color: "rgba(0,0,0,.54)"}}>
-                <span style={{width: "1em"}} className={`flag-icon flag-icon-${this.getFlagCode(node.frontmatter.lang)}`}></span>
-                {' '}
-                {node.frontmatter.date}
-                {' • '}
-                <span>{node.timeToRead + " min read"}</span>
-              </small>
-              <p dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }} />
-            </div>
-          )
-        })}
+        <div className={css.posts_container}>
+          {posts
+            .filter(({node}) => this.state.filter === "all" || node.frontmatter.lang === this.state.filter)
+            .map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <div key={node.fields.slug}>
+                  <h3 style={{marginBottom: rhythm(1 / 4)}}>
+                    <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>{title}</Link>
+                  </h3>
+                  <small style={{color: "rgba(0,0,0,.54)"}}>
+                    <span style={{width: "1em"}} className={`flag-icon flag-icon-${this.getFlagCode(node.frontmatter.lang)}`}></span>
+                    {' '}
+                    {node.frontmatter.date}
+                    {' • '}
+                    <span>{node.timeToRead + " min read"}</span>
+                  </small>
+                  <p dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }} />
+                </div>
+              );
+            }
+          )}
+        </div>
         <hr />
         <Footer />
       </Layout>
