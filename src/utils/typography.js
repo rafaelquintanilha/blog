@@ -20,9 +20,6 @@ oceanBeachTheme.overrideThemeStyles = () => ({
   'h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover': {
     opacity: 0.7,
   },
-  'blockquote': {
-    borderLeft: "0.5925rem solid #000"
-  },
 })
 
 delete oceanBeachTheme.googleFonts
