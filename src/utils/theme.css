@@ -163,5 +163,5 @@
  }
 
  blockquote {
-   border-left-color: #000;
+   border-left-color: #000 !important;
  }
