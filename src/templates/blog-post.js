@@ -7,14 +7,15 @@ import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 
 import "katex/dist/katex.min.css"
-import LOGO from "../assets/logo-square.png";
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const { data } = this.props;
+    const post = data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const title = `${post.frontmatter.title} | ${siteTitle}`;
-    const { previous, next } = this.props.pageContext
+    const siteImage = `${data.site.siteMetadata.siteUrl}${data.site.siteMetadata.image}`;
+    const { previous, next, slug } = this.props.pageContext
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Helmet
@@ -27,7 +28,7 @@ class BlogPostTemplate extends React.Component {
             },
             {
               property: 'og:url',
-              content: `${this.props.data.site.siteMetadata.siteUrl}${this.props.pageContext.slug}`,
+              content: `${data.site.siteMetadata.siteUrl}${slug}`,
             },
             {
               property: 'og:title',
@@ -47,7 +48,7 @@ class BlogPostTemplate extends React.Component {
             },
             {
               name: 'twitter:creator',
-              content: this.props.data.site.siteMetadata.social.twitter,
+              content: data.site.siteMetadata.social.twitter,
             },
             {
               name: 'twitter:title',
@@ -63,11 +64,11 @@ class BlogPostTemplate extends React.Component {
             },
             {
               property: 'og:image',
-              content: `${this.props.data.site.siteMetadata.siteUrl}${LOGO}`,
+              content: siteImage,
             },
             {
               property: 'twitter:image',
-              content: `${this.props.data.site.siteMetadata.siteUrl}${LOGO}`,
+              content: siteImage,
             },
             {
               property: 'og:image:width',
@@ -159,6 +160,7 @@ export const pageQuery = graphql`
         social {
           twitter
         }
+        image
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
