@@ -2,7 +2,7 @@
 title: The Drunken Sailor and Conservatism
 date: "2019-03-27"
 lastReview: "2019-03-27"
-spoiler: How an intriguing math problem can help us understand what means to be conservative.
+spoiler: How an intriguing math problem can help us understand what means to be a conservative.
 lang: en-us
 ---
 

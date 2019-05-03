@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import css from './Layout.module.css';
-
-import LOGO from './rq-logo-simple.svg';
-import { rhythm } from '../utils/typography'
+import LOGO from './logo.svg';
 
 export default class Layout extends React.Component {
 
@@ -14,17 +12,8 @@ export default class Layout extends React.Component {
         alt="Rafael Quintanilha"
         style={{
           marginBottom: 0, 
-          height: rhythm(2.5),
         }}
       />
-    );
-  }
-
-  get menu() {
-    return (
-      <div className={css.menu}>
-        <Link to="/about">What's this?</Link>
-      </div>
     );
   }
 
@@ -42,7 +31,6 @@ export default class Layout extends React.Component {
             {this.avatar}
           </Link>
         </div>
-        {this.menu}
       </div>
     );
   }

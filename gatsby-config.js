@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Rafael Quintanilha',
+    title: 'The Contrarian',
     author: 'Rafael Quintanilha',
-    description: 'Personal space for Rafael Quintanilha. Web Development. Front-end. React. UI/UX. Accessibility.',
-    siteUrl: 'https://rafaelquintanilha.com',
+    description: 'Politically incorrect Rafael Quintanilha. Politics. Mathematics. Probability. Contrarian opinions in general.',
+    siteUrl: 'https://contrarian.rafaelquintanilha.com',
     social: {
-      twitter: '@rgsquintanilha',
+      twitter: '@rafaquint',
     },
   },
   pathPrefix: '/',
@@ -53,13 +53,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Rafael Quintanilha`,
-        short_name: `RQuintanilha`,
+        name: `The Contrarian`,
+        short_name: `The Contrarian`,
         start_url: `/`,
-        background_color: `#003380`,
-        theme_color: `#003380`,
+        background_color: `#000`,
+        theme_color: `#000`,
         display: `minimal-ui`,
-        icon: `src/assets/rq-logo-512.svg`,
+        icon: `src/assets/logo-square.svg`,
       },
     },
     `gatsby-plugin-offline`,
