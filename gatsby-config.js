@@ -7,6 +7,7 @@ module.exports = {
     social: {
       twitter: '@webquintanilha',
     },
+    image: "/logo-square.png",
   },
   pathPrefix: '/',
   plugins: [

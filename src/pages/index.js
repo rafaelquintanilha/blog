@@ -5,7 +5,6 @@ import Layout from '../components/Layout';
 import { rhythm } from '../utils/typography';
 import 'flag-icon-css/css/flag-icon.css';
 import Footer from '../components/Footer';
-import LOGO from "../assets/logo-square.png";
 import css from './index.module.css';
 
 export default class BlogIndex extends React.Component {
@@ -45,6 +44,7 @@ export default class BlogIndex extends React.Component {
     const { data } = this.props;
     const siteTitle = data.site.siteMetadata.title;
     const siteDescription = data.site.siteMetadata.description;
+    const siteImage = `${data.site.siteMetadata.siteUrl}${data.site.siteMetadata.image}`;
     const posts = data.allMarkdownRemark.edges;
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -94,11 +94,11 @@ export default class BlogIndex extends React.Component {
             },
             {
               property: 'og:image',
-              content: `${data.site.siteMetadata.siteUrl}${LOGO}`,
+              content: siteImage,
             },
             {
               property: 'twitter:image',
-              content: `${data.site.siteMetadata.siteUrl}${LOGO}`,
+              content: siteImage,
             },
             {
               property: 'og:image:width',
@@ -155,6 +155,7 @@ export const pageQuery = graphql`
         social {
           twitter
         }
+        image
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
