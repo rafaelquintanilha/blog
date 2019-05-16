@@ -8,7 +8,7 @@ lang: pt-br
 
 Esse post inicia uma série sobre desenvolvimento web. Aqui, pretendo escrever conteúdos em português voltados para iniciantes na área, que tenham pouco ou nenhum contato com programação, mas interesse em desenvolver suas habilidades como programadores web.
 
-Mas antes de explicar de forma completa o que constará nessa série, permita-me uma breve disgressão.
+Mas antes de explicar de forma completa o que constará nessa série, permita-me uma breve digressão.
 
 ## Uma Interface Vale Mais que Mil Palavras
 
