@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 
 import "katex/dist/katex.min.css"
+import Subscribe from '../components/Subscribe';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -110,13 +111,9 @@ class BlogPostTemplate extends React.Component {
           Last reviewed {post.frontmatter.lastReview}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <Subscribe />
+        <hr style={{marginTop: rhythm(1)}} />
         <Bio />
-
         <ul
           style={{
             display: 'flex',

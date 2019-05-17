@@ -6,6 +6,7 @@ import { rhythm } from '../utils/typography';
 import 'flag-icon-css/css/flag-icon.css';
 import Footer from '../components/Footer';
 import css from './index.module.css';
+import Subscribe from '../components/Subscribe';
 
 export default class BlogIndex extends React.Component {
   constructor() {
@@ -138,7 +139,8 @@ export default class BlogIndex extends React.Component {
             }
           )}
         </div>
-        <hr />
+        <Subscribe />
+        <hr style={{marginTop: "50px"}} />
         <Footer />
       </Layout>
     )
