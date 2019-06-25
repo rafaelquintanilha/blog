@@ -103,7 +103,6 @@ class BlogPostTemplate extends React.Component {
           style={{
             ...scale(-2 / 5),
             display: 'block',
-            marginBottom: rhythm(1),
             marginTop: rhythm(-1),
             fontStyle: 'italic'
           }}

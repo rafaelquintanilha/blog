@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import Bio from '../components/Bio';
+import Subscribe from '../components/Subscribe';
 import { Link } from 'gatsby';
 
 export default class About extends React.Component {
@@ -30,7 +31,8 @@ export default class About extends React.Component {
         <p>
           Now you know what you are doing here, <Link to="/">go read something more useful</Link>.
         </p>
-        <hr />
+        <Subscribe />
+        <hr style={{marginTop: "50px"}} />
         <Bio />
       </Layout>
     );
