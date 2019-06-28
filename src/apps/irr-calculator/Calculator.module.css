@@ -17,6 +17,12 @@
   margin-bottom: 10px;
 }
 
+.container > header > div {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
+
 .main {
   flex: 1;
   max-width: 800px;

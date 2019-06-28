@@ -136,6 +136,9 @@ export default class Calculator extends React.Component {
       <div className={css['container']}>
         <header>
           <h1>IRR Calculator</h1>
+          <div>
+            See also: <a href="/building-an-online-irr-calculator-with-react/">Building an Online IRR Calculator with React</a>
+          </div>
         </header>
         <main className={css['main']}>
           <NumericInput 
