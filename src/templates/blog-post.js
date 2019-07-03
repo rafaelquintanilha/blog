@@ -8,6 +8,7 @@ import { rhythm, scale } from '../utils/typography'
 
 import "katex/dist/katex.min.css"
 import Subscribe from '../components/Subscribe';
+import TwitterButton from '../components/TwitterButton';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -109,7 +110,9 @@ class BlogPostTemplate extends React.Component {
         >
           Last reviewed {post.frontmatter.lastReview}
         </p>
+        <TwitterButton center={false} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <TwitterButton />
         <Subscribe />
         <hr style={{marginTop: rhythm(1)}} />
         <Bio />

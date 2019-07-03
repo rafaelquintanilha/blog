@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import Bio from '../components/Bio';
 import Subscribe from '../components/Subscribe';
 import { Link } from 'gatsby';
+import TwitterButton from '../components/TwitterButton';
 
 export default class About extends React.Component {
   render() {
@@ -31,6 +32,7 @@ export default class About extends React.Component {
         <p>
           Now you know what you are doing here, <Link to="/">go read something more useful</Link>.
         </p>
+        <TwitterButton />
         <Subscribe />
         <hr style={{marginTop: "50px"}} />
         <Bio />
