@@ -6,7 +6,7 @@ spoiler: Discover the most efficient way to not succeed as a developer.
 lang: en-us
 ---
 
-The great mathematician Carl Jacobi once said *"Invert, always invert"*. He advocated that, by analyzing a problem backwards, one could uncover the best solution to it.
+The great mathematician Carl Jacobi once said *"Invert, always invert"*. He advocated that, by analyzing a problem backward, one could uncover the best solution to it.
 
 With that in mind, Berkshire Hathway's legendary partner Charles Munger gave a [terrific speech to the Harvard School](http://jameslau88.com/charlie_munger_on_invert_always_invert.htm) on how to *not* be successful. That made me think – how is the easiest way to become a *bad* developer?
 
@@ -21,7 +21,7 @@ Software Development is one of the few areas where you have a free pass to make 
 
 Yet, it is easy to forget that. You can be the best developer in your company and *comparatively* make fewer mistakes than the others. But the *absolute* number of mistakes you make will still be high, there's no escape from it. The good news is that's fine – machines need a lot of precision when communicating and **one bad sentence is enough to blow up a 10,000 LOC codebase**.
 
-But because you consider yourself better than the other developers, which might very well be true, you start to think that you don't make mistakes. Or that if some issue arised, you have nothing to do with it.
+But because you consider yourself better than the other developers, which might very well be true, you start to think that you don't make mistakes. Or that if some issue arose, you have nothing to do with it.
 
 The problem is that many times you will have responsibility. Doesn't matter if you were the author of the bad code, overlooked it in your review process or didn't anticipate it when planning. **There are just too many ways of making mistakes**.
 
