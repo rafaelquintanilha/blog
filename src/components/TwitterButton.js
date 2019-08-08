@@ -5,12 +5,12 @@ const TwitterButton = props => (
   <div style={{display: "flex", justifyContent: props.center ? "center" : "flex-start"}}>
     <a 
       href="https://twitter.com/webquintanilha?ref_src=twsrc%5Etfw" 
-      class="twitter-follow-button" 
+      className="twitter-follow-button" 
       data-size="large" 
       data-show-count="false">
       Follow @webquintanilha
     </a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
   </div>
 );
 

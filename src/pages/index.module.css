@@ -49,6 +49,17 @@
   width: 100%;
 }
 
+.filter_container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: right;
+}
+
+.filter_container > label {
+  margin-right: 10px;
+}
+
 @media only screen and (max-width: 767px) {
   .posts_container > div:not(:first-child) {
     width: 100%;

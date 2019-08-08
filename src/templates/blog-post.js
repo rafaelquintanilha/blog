@@ -1,90 +1,24 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
-
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import { rhythm, scale } from '../utils/typography'
-
-import "katex/dist/katex.min.css"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import "katex/dist/katex.min.css";
+import { rhythm, scale } from '../utils/typography';
+import Bio from '../components/Bio';
+import Layout from '../components/Layout';
 import Subscribe from '../components/Subscribe';
 import TwitterButton from '../components/TwitterButton';
+import SEO from '../components/SEO';
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const { data } = this.props;
-    const post = data.markdownRemark
-    const siteTitle = data.site.siteMetadata.title
-    const title = `${post.frontmatter.title} | ${siteTitle}`;
-    const siteImage = `${data.site.siteMetadata.siteUrl}${data.site.siteMetadata.image}`;
-    const { previous, next, slug } = this.props.pageContext
+    const post = this.props.data.markdownRemark;
+    const { previous, next, slug } = this.props.pageContext;
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          title={title}
-          meta={[
-            {
-              name: 'description', 
-              content: post.frontmatter.spoiler,
-            },
-            {
-              property: 'og:url',
-              content: `${data.site.siteMetadata.siteUrl}${slug}`,
-            },
-            {
-              property: 'og:title',
-              content: title,
-            },
-            {
-              property: 'og:site_name',
-              content: title,
-            },
-            {
-              property: 'og:description',
-              content: post.frontmatter.spoiler,
-            },
-            {
-              name: 'twitter:card',
-              content: 'summary',
-            },
-            {
-              name: 'twitter:creator',
-              content: data.site.siteMetadata.social.twitter,
-            },
-            {
-              name: 'twitter:title',
-              content: title,
-            },
-            {
-              name: 'twitter:description',
-              content: post.frontmatter.spoiler,
-            },
-            {
-              property: 'og:type',
-              content: 'article',
-            },
-            {
-              property: 'og:image',
-              content: siteImage,
-            },
-            {
-              property: 'twitter:image',
-              content: siteImage,
-            },
-            {
-              property: 'og:image:width',
-              content: `512`,
-            },
-            {
-              property: 'og:image:height',
-              content: `512`,
-            },
-            {
-              property: 'keywords',
-              content: `react, frontend, web development, accessibility, a11y, ui, ux, design, technology`,
-            },
-          ]}
+      <Layout>
+        <SEO 
+          slug={slug} 
+          type="article" 
+          description={post.frontmatter.spoiler} 
+          title={post.frontmatter.title}
         />
         <h1>{post.frontmatter.title}</h1>
         <p
@@ -98,7 +32,7 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
           {' • '}
-          <span>{post.timeToRead + " min read"}</span>
+          <span>{post.timeToRead} min read</span>
         </p>
         <p
           style={{
@@ -147,21 +81,10 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-        siteUrl
-        social {
-          twitter
-        }
-        image
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt
@@ -175,4 +98,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
