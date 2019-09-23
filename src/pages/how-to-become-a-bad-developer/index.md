@@ -8,7 +8,7 @@ lang: en-us
 
 The great mathematician Carl Jacobi once said *"Invert, always invert"*. He advocated that, by analyzing a problem backward, one could uncover the best solution to it.
 
-With that in mind, Berkshire Hathway's legendary partner Charles Munger gave a [terrific speech to the Harvard School](http://jameslau88.com/charlie_munger_on_invert_always_invert.htm) on how to *not* be successful. That made me think – how is the easiest way to become a *bad* developer?
+With that in mind, Berkshire Hathway's legendary partner Charles Munger gave a [terrific speech to the Harvard School](http://jameslau88.com/charlie_munger_on_invert_always_invert.htm) on how to *not* be successful (I originally read this and other Charles' speeches in the amazing [Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger](https://www.amazon.com/gp/product/1578645018/ref=as_li_tl?ie=UTF8&tag=rafaelquintan-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1578645018&linkId=e16372c9ef26ae70461b9916a8a7b3de)). That made me think – how is the easiest way to become a *bad* developer?
 
 What you will see next is a highly subjective, non-exhaustive unordered list of principles that, if you follow, I can guarantee will lead you to become a bad developer. I say "principles" because I am not interested in technicalities (e.g. choose bad variable names, never comment your code, etc), once they are a sub-product of the guidelines you follow.
 
