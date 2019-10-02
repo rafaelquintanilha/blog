@@ -46,6 +46,7 @@ class BlogPostTemplate extends React.Component {
         </p>
         <TwitterButton center={false} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div id="amzn-assoc-ad-52287c01-f859-4702-b701-fef310cd19f5"></div>
         <TwitterButton />
         <Subscribe />
         <hr style={{marginTop: rhythm(1)}} />
