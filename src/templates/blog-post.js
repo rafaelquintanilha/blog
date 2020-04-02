@@ -11,6 +11,7 @@ import SEO from '../components/SEO';
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
+    console.log(post)
     const { previous, next, slug } = this.props.pageContext;
     return (
       <Layout>
@@ -19,6 +20,7 @@ class BlogPostTemplate extends React.Component {
           type="article" 
           description={post.frontmatter.spoiler} 
           title={post.frontmatter.title}
+          canonical={post.frontmatter.canonical}
         />
         <h1>{post.frontmatter.title}</h1>
         <p
@@ -96,6 +98,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         lastReview(formatString: "MMMM DD, YYYY")
         spoiler
+        canonical
       }
     }
   }

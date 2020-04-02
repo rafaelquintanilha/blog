@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, keywords, title, type, slug }) {
+function SEO({ description, lang, meta, keywords, title, type, slug, canonical }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -107,6 +107,7 @@ function SEO({ description, lang, meta, keywords, title, type, slug }) {
       )
       .concat(meta)}
     >
+      {canonical && <link rel="canonical" href={canonical} />}
       <script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=52287c01-f859-4702-b701-fef310cd19f5"></script>
     </Helmet>
   )
@@ -126,6 +127,7 @@ SEO.propTypes = {
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string,
   slug: PropTypes.string,
+  canonical: PropTypes.string,
 }
 
 export default SEO;
