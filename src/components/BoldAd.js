@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './BoldAd.module.css';
 import { OutboundLink } from "gatsby-plugin-google-analytics"
-import { random } from "lodash";
+import { sample } from "lodash";
 
 const CTAs = [
   "codePost is awarding CS students a $500 scholarship. Click to apply!",
@@ -10,17 +10,15 @@ const CTAs = [
 ];
 
 const BoldAd = () => {
-  const index = random(0, CTAs.length - 1);
-  const selectedCTA = CTAs[index];  
+  const selectedCTA = sample(CTAs);  
   return (
     <OutboundLink 
       href="https://bold.org/scholarships/codepost-computer-science-education-scholarship/"
       target="_blank"      
       className={css['container']}
       eventCategory="Bold"
-      eventAction="Click"
-      eventLabel="codePost Campaing"
-      eventValue={index}>
+      eventAction="codePost Click"
+      eventLabel={selectedCTA}>
       {selectedCTA}
     </OutboundLink>
   )
