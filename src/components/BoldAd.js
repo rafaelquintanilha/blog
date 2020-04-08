@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './BoldAd.module.css';
-import { trackCustomEvent, OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { random } from "lodash";
 
 const CTAs = [
@@ -18,15 +18,10 @@ const BoldAd = () => {
       target="_blank"
       rel="noopener noreferrer"
       className={css['container']}
-      onClick={e => {
-        e.preventDefault()
-        trackCustomEvent({
-          category: "Bold",
-          action: "Click",
-          label: "codePost Campaign",
-          value: index
-        })
-      }}>
+      eventCategory="Bold"
+      eventAction="Click"
+      eventLabel="codePost Campaing"
+      eventValue={index}>
       {selectedCTA}
     </OutboundLink>
   )
