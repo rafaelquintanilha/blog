@@ -15,8 +15,7 @@ const BoldAd = () => {
   return (
     <OutboundLink 
       href="https://bold.org/scholarships/codepost-computer-science-education-scholarship/"
-      target="_blank"
-      rel="noopener noreferrer"
+      target="_blank"      
       className={css['container']}
       eventCategory="Bold"
       eventAction="Click"
