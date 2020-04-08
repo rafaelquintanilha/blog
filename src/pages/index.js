@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import css from './index.module.css';
 import Subscribe from '../components/Subscribe';
 import SEO from '../components/SEO';
+import BoldAd from '../components/BoldAd';
 
 export default class BlogIndex extends React.Component {
   constructor() {
@@ -41,6 +42,7 @@ export default class BlogIndex extends React.Component {
     return (
       <Layout>
         <SEO />
+        <BoldAd />
         {this.filter}
         <div className={css.posts_container}>
           {posts

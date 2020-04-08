@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import css from './Layout.module.css';
 import LOGO from './logo.svg';
 import { rhythm } from '../utils/typography'
+import BoldAd from './BoldAd';
 
 export default class Layout extends React.Component {
 

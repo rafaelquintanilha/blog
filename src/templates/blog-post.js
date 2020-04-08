@@ -7,11 +7,11 @@ import Layout from '../components/Layout';
 import Subscribe from '../components/Subscribe';
 import TwitterButton from '../components/TwitterButton';
 import SEO from '../components/SEO';
+import BoldAd from '../components/BoldAd';
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
-    console.log(post)
     const { previous, next, slug } = this.props.pageContext;
     return (
       <Layout>
@@ -48,6 +48,7 @@ class BlogPostTemplate extends React.Component {
         </p>
         <TwitterButton center={false} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <BoldAd />
         <div id="amzn-assoc-ad-52287c01-f859-4702-b701-fef310cd19f5"></div>
         <TwitterButton />
         <Subscribe />
