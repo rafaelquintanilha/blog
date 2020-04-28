@@ -36,7 +36,7 @@ The truth is that you will be fine with any of them. Personally, I like to use G
 
 One of the greatest advantages of doing front-end work is that deploying and sharing has become trivial. There are many free solutions that allow you to deploy your prototype in literally a couple minutes. 
 
-You can achieve that with [Netlify](https://www.netlify.com/), [Now](https://zeit.co/now) and [Surge](https://surge.sh/) (among others). All of them will cover your back and provide HTTPS support, custom domains, and continuous development. Particularly, I’m very fond of Netlify and find their deployment process insanely trivial. Simple connect your GitHub or BitBucket account, push your code and wait a few seconds until your app is available on the internet.
+You can achieve that with [Netlify](https://www.netlify.com/), [Vercel](https://nextjs.org/) (formerly ZEIT) and [Surge](https://surge.sh/) (among others). All of them will cover your back and provide HTTPS support, custom domains, and continuous development. Particularly, I’m very fond of Netlify and find their deployment process insanely trivial. Simple connect your GitHub or BitBucket account, push your code and wait a few seconds until your app is available on the internet.
 
 The power of firing up a static website with a custom domain and share it with your clients is priceless. It is a good strategy to bring them close to the development, ask them for help to test multiple devices and as a consequence have them gathering feedback and finding bugs much earlier.
 
