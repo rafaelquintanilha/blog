@@ -1,24 +1,24 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import { rhythm } from '../utils/typography';
-import 'flag-icon-css/css/flag-icon.css';
-import Footer from '../components/Footer';
-import css from './index.module.css';
-import Subscribe from '../components/Subscribe';
-import SEO from '../components/SEO';
-import BoldAd from '../components/BoldAd';
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import { rhythm } from '../utils/typography'
+import 'flag-icon-css/css/flag-icon.css'
+import Footer from '../components/Footer'
+import css from './index.module.css'
+import Subscribe from '../components/Subscribe'
+import SEO from '../components/SEO'
+import BoldAd from '../components/BoldAd'
 
 export default class BlogIndex extends React.Component {
   constructor() {
-    super();
-    this.state = { filter: "all" };
+    super()
+    this.state = { filter: 'all' }
   }
 
   getFlagCode(lang) {
-    if ( lang === "pt-br" ) return "br";
-    if ( lang === "en-us" ) return "us";
-    return "";
+    if (lang === 'pt-br') return 'br'
+    if (lang === 'en-us') return 'us'
+    return ''
   }
 
   get filter() {
@@ -26,49 +26,62 @@ export default class BlogIndex extends React.Component {
       <div className={css.filter_container}>
         <label htmlFor="home-language-select">Show:</label>
         <select
-          id="home-language-select" 
-          value={this.state.filter} 
-          onChange={e => this.setState({filter: e.target.value})}>
+          id="home-language-select"
+          value={this.state.filter}
+          onChange={e => this.setState({ filter: e.target.value })}
+        >
           <option value="all">All</option>
           <option value="en-us">English</option>
           <option value="pt-br">Português</option>
         </select>
       </div>
-    );
+    )
   }
 
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges;
+    const posts = this.props.data.allMarkdownRemark.edges
     return (
       <Layout>
         <SEO />
-        <BoldAd />
         {this.filter}
         <div className={css.posts_container}>
           {posts
-            .filter(({ node }) => this.state.filter === "all" || node.frontmatter.lang === this.state.filter)
+            .filter(
+              ({ node }) =>
+                this.state.filter === 'all' ||
+                node.frontmatter.lang === this.state.filter
+            )
             .map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug;
+              const title = node.frontmatter.title || node.fields.slug
               return (
                 <div key={node.fields.slug}>
-                  <h3 style={{marginBottom: rhythm(1 / 4)}}>
-                    <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>{title}</Link>
+                  <h3 style={{ marginBottom: rhythm(1 / 4) }}>
+                    <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                      {title}
+                    </Link>
                   </h3>
-                  <small style={{color: "rgba(0,0,0,.54)"}}>
-                    <span style={{width: "1em"}} className={`flag-icon flag-icon-${this.getFlagCode(node.frontmatter.lang)}`}></span>
-                    {' '}
+                  <small style={{ color: 'rgba(0,0,0,.54)' }}>
+                    <span
+                      style={{ width: '1em' }}
+                      className={`flag-icon flag-icon-${this.getFlagCode(
+                        node.frontmatter.lang
+                      )}`}
+                    />{' '}
                     {node.frontmatter.date}
                     {' • '}
-                    <span>{node.timeToRead + " min read"}</span>
+                    <span>{node.timeToRead + ' min read'}</span>
                   </small>
-                  <p dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }} />
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.spoiler,
+                    }}
+                  />
                 </div>
-              );
-            }
-          )}
+              )
+            })}
         </div>
         <Subscribe />
-        <hr style={{marginTop: "50px"}} />
+        <hr style={{ marginTop: '50px' }} />
         <Footer />
       </Layout>
     )
@@ -95,4 +108,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

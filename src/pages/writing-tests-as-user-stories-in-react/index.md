@@ -1,8 +1,8 @@
 ---
 title: Writing Tests as User Stories in React
-date: "2020-04-02"
-lastReview: "2020-04-02"
-spoiler: How to leverage React Testing Library to write tests that make sense
+date: '2020-04-02'
+lastReview: '2020-04-02'
+spoiler: How to leverage React Testing Library to write tests that make sense.
 lang: en-us
 canonical: https://blog.logrocket.com/semantic-tests-with-react-testing-library/
 ---
@@ -91,22 +91,22 @@ We’ll try to match each user story to a single test. By doing that, we will be
 Consider this basic skeleton for `App.test.js`:
 
 ```jsx
-import React from "react";
-import { cleanup } from "@testing-library/react";
+import React from 'react'
+import { cleanup } from '@testing-library/react'
 
-afterEach(cleanup);
+afterEach(cleanup)
 
-test("user is able to convert from celsius to fahrenheit", () => {
+test('user is able to convert from celsius to fahrenheit', () => {
   /* story 1 goes here */
-});
+})
 
-test("user is able to convert from fahrenheit to celsius", () => {
+test('user is able to convert from fahrenheit to celsius', () => {
   /* story 2 goes here */
-});
+})
 
-test("user can reset calculation and automatically focus on the input", () => {
+test('user can reset calculation and automatically focus on the input', () => {
   /* story 3 goes here */
-});
+})
 ```
 
 (We are using [Jest](https://jestjs.io/) as our test runner, but that’s not relevant to the main point presented in the article.)
@@ -116,23 +116,23 @@ Notice that our three tests are really straightforward and any failures in them 
 Now we’ll leverage RTL and write the first test in a way that makes sense:
 
 ```jsx
-import React from "react";
-import App from "./App.js";
-import { cleanup, render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import React from 'react'
+import App from './App.js'
+import { cleanup, render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
-afterEach(cleanup);
+afterEach(cleanup)
 
-test("user is able to convert from celsius to fahrenheit", () => {
-  render(<App />);
-  const input = screen.getByLabelText("Temperature:");
-  userEvent.type(input, "25");
-  expect(screen.getByText("25ºC equals to 77ºF")).toBeTruthy();
-  userEvent.type(input, "0");
-  expect(screen.getByText("0ºC equals to 32ºF")).toBeTruthy();
-  userEvent.type(input, "banana");
-  expect(screen.queryByTestId("result")).toBeFalsy();
-});
+test('user is able to convert from celsius to fahrenheit', () => {
+  render(<App />)
+  const input = screen.getByLabelText('Temperature:')
+  userEvent.type(input, '25')
+  expect(screen.getByText('25ºC equals to 77ºF')).toBeTruthy()
+  userEvent.type(input, '0')
+  expect(screen.getByText('0ºC equals to 32ºF')).toBeTruthy()
+  userEvent.type(input, 'banana')
+  expect(screen.queryByTestId('result')).toBeFalsy()
+})
 
 /* code goes on */
 ```
@@ -159,10 +159,10 @@ This object provides a handful of user interactions that are semantically unders
 
 ```jsx
 // Previously
-fireEvent.change(input, { target: { value: "25" } });
+fireEvent.change(input, { target: { value: '25' } })
 
 // With userEvents
-userEvent.type(input, "25");
+userEvent.type(input, '25')
 ```
 
 Not only is our code is shorter, but it also makes much more sense now.
@@ -186,18 +186,18 @@ Let’s jump into our second user story — convert from Fahrenheit to Celsius (
 The test should be pretty similar to our first one, with a single caveat: we need to make sure that the user has selected the right option.
 
 ```jsx
-test("user is able to convert from fahrenheit to celsius", () => {
-  render(<App />);
-  const fahrenheitOption = screen.getByLabelText("Fahrenheit to Celsius");
-  userEvent.click(fahrenheitOption);
-  const input = screen.getByLabelText("Temperature:");
-  userEvent.type(input, "77");
-  expect(screen.getByText("77ºF equals to 25ºC")).toBeTruthy();
-  userEvent.type(input, "32");
-  expect(screen.getByText("32ºF equals to 0ºC")).toBeTruthy();
-  userEvent.type(input, "banana");
-  expect(screen.queryByTestId("result")).toBeFalsy();
-});
+test('user is able to convert from fahrenheit to celsius', () => {
+  render(<App />)
+  const fahrenheitOption = screen.getByLabelText('Fahrenheit to Celsius')
+  userEvent.click(fahrenheitOption)
+  const input = screen.getByLabelText('Temperature:')
+  userEvent.type(input, '77')
+  expect(screen.getByText('77ºF equals to 25ºC')).toBeTruthy()
+  userEvent.type(input, '32')
+  expect(screen.getByText('32ºF equals to 0ºC')).toBeTruthy()
+  userEvent.type(input, 'banana')
+  expect(screen.queryByTestId('result')).toBeFalsy()
+})
 ```
 
 That’s it. By leveraging `userEvent` again, emulating a click event becomes trivial.
@@ -209,16 +209,16 @@ Our third and final test is slightly different — now our goal is to test the u
 We want to make sure that our application is accessible and that users can rapidly test several values:
 
 ```jsx
-test("user can reset calculation and automatically focus on the input", () => {
-  render(<App />);
-  const input = screen.getByLabelText("Temperature:");
-  userEvent.type(input, "25");
-  expect(screen.queryByTestId("result")).toBeTruthy();
-  const resetButton = screen.getByText("Reset");
-  userEvent.click(resetButton);
-  expect(screen.queryByTestId("result")).toBeFalsy();
-  expect(document.activeElement).toBe(input);
-});
+test('user can reset calculation and automatically focus on the input', () => {
+  render(<App />)
+  const input = screen.getByLabelText('Temperature:')
+  userEvent.type(input, '25')
+  expect(screen.queryByTestId('result')).toBeTruthy()
+  const resetButton = screen.getByText('Reset')
+  userEvent.click(resetButton)
+  expect(screen.queryByTestId('result')).toBeFalsy()
+  expect(document.activeElement).toBe(input)
+})
 ```
 
 There you have it. We basically made three checks:

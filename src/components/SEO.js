@@ -1,9 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, keywords, title, type, slug, canonical }) {
+function SEO({
+  description,
+  lang,
+  meta,
+  keywords,
+  title,
+  type,
+  slug,
+  canonical,
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,23 +30,23 @@ function SEO({ description, lang, meta, keywords, title, type, slug, canonical }
         }
       }
     `
-  );
+  )
 
-  const metaTitle = title 
-    ? `${title} | ${site.siteMetadata.title}` 
-    : site.siteMetadata.title; 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaTitle = title
+    ? `${title} | ${site.siteMetadata.title}`
+    : site.siteMetadata.title
+  const metaDescription = description || site.siteMetadata.description
 
   // If there is a slug, append it to the end of the site url
   const metaURL = slug
-      ? `${site.siteMetadata.siteUrl}${slug}`
-      : site.siteMetadata.siteUrl;
+    ? `${site.siteMetadata.siteUrl}${slug}`
+    : site.siteMetadata.siteUrl
 
-  const metaImage = `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`;
+  const metaImage = `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`
 
   return (
     <Helmet
-      htmlAttributes={{lang}}
+      htmlAttributes={{ lang }}
       title={metaTitle}
       meta={[
         {
@@ -97,18 +106,17 @@ function SEO({ description, lang, meta, keywords, title, type, slug, canonical }
           content: metaImage,
         },
       ]
-      .concat(
-        keywords.length > 0
-          ? {
-              name: `keywords`,
-              content: keywords.join(`, `),
-            }
-          : []
-      )
-      .concat(meta)}
+        .concat(
+          keywords.length > 0
+            ? {
+                name: `keywords`,
+                content: keywords.join(`, `),
+              }
+            : []
+        )
+        .concat(meta)}
     >
       {canonical && <link rel="canonical" href={canonical} />}
-      <script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=52287c01-f859-4702-b701-fef310cd19f5"></script>
     </Helmet>
   )
 }
@@ -116,8 +124,19 @@ function SEO({ description, lang, meta, keywords, title, type, slug, canonical }
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  keywords: ["react", "frontend", "web development", "accessibility", "a11y", "ui", "ux", "design", "technology"],
-  type: "website",
+  keywords: [
+    'react',
+    'frontend',
+    'web development',
+    'gatsby',
+    'accessibility',
+    'a11y',
+    'ui',
+    'ux',
+    'design',
+    'technology',
+  ],
+  type: 'website',
 }
 
 SEO.propTypes = {
@@ -130,4 +149,4 @@ SEO.propTypes = {
   canonical: PropTypes.string,
 }
 
-export default SEO;
+export default SEO
