@@ -3,7 +3,7 @@
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   border-radius: 2px;
   text-align: center;
 }
@@ -45,7 +45,7 @@
 .input_container {
   display: flex;
   height: 40px;
-  margin-bottom: 0;  
+  margin-bottom: 0;
 }
 
 .input_container > input {
@@ -67,7 +67,12 @@
   padding-left: 15px;
   padding-right: 15px;
   border: 1px solid transparent;
-  box-shadow: none
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.input_container > button:hover {
+  opacity: 0.8;
 }
 
 .input_container > button:disabled {

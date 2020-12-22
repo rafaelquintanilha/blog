@@ -56,7 +56,7 @@ export default class BlogIndex extends React.Component {
               return (
                 <div key={node.fields.slug}>
                   <h3 style={{ marginBottom: rhythm(1 / 4) }}>
-                    <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                    <Link className={css.link_title} to={node.fields.slug}>
                       {title}
                     </Link>
                   </h3>

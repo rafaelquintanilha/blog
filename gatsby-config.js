@@ -2,15 +2,24 @@ module.exports = {
   siteMetadata: {
     title: 'Rafael Quintanilha',
     author: 'Rafael Quintanilha',
-    description: 'Posts about Web Development, Front-end, React, UI/UX, Accessibility.',
+    description:
+      'Posts about Web Development, Front-end, React, UI/UX, Accessibility.',
     siteUrl: 'https://rafaelquintanilha.com',
     social: {
       twitter: '@webquintanilha',
     },
-    image: "/logo-square.png",
+    image: '/logo-square.png',
   },
   pathPrefix: '/',
   plugins: [
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -72,6 +81,8 @@ module.exports = {
       },
     },
     `gatsby-plugin-twitter`,
-    `gatsby-plugin-netlify`
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
   ],
 }

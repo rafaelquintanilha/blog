@@ -50,8 +50,6 @@ class BlogPostTemplate extends React.Component {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <TwitterButton />
         <Subscribe />
-        <hr style={{ marginTop: rhythm(1) }} />
-        <Bio />
         <ul
           style={{
             display: 'flex',
@@ -59,6 +57,7 @@ class BlogPostTemplate extends React.Component {
             justifyContent: 'space-between',
             listStyle: 'none',
             padding: 0,
+            marginTop: rhythm(2),
           }}
         >
           <li>
@@ -76,6 +75,8 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
+        <hr style={{ marginTop: rhythm(1) }} />
+        <Bio />
       </Layout>
     )
   }

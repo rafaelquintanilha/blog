@@ -1,0 +1,47 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.footer > div:first-child {
+  line-height: 32px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container > a {
+  text-decoration: none;
+  box-shadow: none;
+  background-image: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.container > a:hover {
+  background-color: #eee;
+}
+
+.container > a:not(:last-child) {
+  margin-right: 12px;
+}
+
+.container > a > svg {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.container > a > svg path,
+.container > a > svg polygon {
+  fill: black !important;
+}
