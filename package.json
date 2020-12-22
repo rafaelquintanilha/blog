@@ -30,7 +30,7 @@
     "gatsby-remark-smartypants": "^2.7.0",
     "gatsby-source-filesystem": "^2.8.0",
     "gatsby-transformer-remark": "^2.13.0",
-    "gatsby-transformer-sharp": "^2.11.1",
+    "gatsby-transformer-sharp": "^2.9.0",
     "isomorphic-fetch": "^2.2.1",
     "katex": "^0.10.2",
     "lodash": "^4.17.20",
