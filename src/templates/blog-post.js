@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import 'katex/dist/katex.min.css'
-import { rhythm, scale } from '../utils/typography'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import Subscribe from '../components/Subscribe'
@@ -21,13 +20,13 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           canonical={post.frontmatter.canonical}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h1 style={{ marginBottom: '8px' }}>{post.frontmatter.title}</h1>
         <p
           style={{
-            ...scale(-1 / 5),
+            fontSize: '18px',
             display: 'block',
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            marginBottom: '0',
+            marginTop: '0',
             color: 'rgba(0,0,0,.54)',
           }}
         >
@@ -37,9 +36,8 @@ class BlogPostTemplate extends React.Component {
         </p>
         <p
           style={{
-            ...scale(-2 / 5),
+            fontSize: '16px',
             display: 'block',
-            marginTop: rhythm(-1),
             fontStyle: 'italic',
           }}
         >
@@ -56,7 +54,7 @@ class BlogPostTemplate extends React.Component {
             justifyContent: 'space-between',
             listStyle: 'none',
             padding: 0,
-            marginTop: rhythm(2),
+            marginTop: '60px',
           }}
         >
           <li>
@@ -74,7 +72,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
-        <hr style={{ marginTop: rhythm(1) }} />
+        <hr style={{ marginTop: '40px' }} />
         <Bio />
       </Layout>
     )

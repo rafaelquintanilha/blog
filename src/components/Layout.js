@@ -1,23 +1,20 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import css from './Layout.module.css';
-import LOGO from './logo.svg';
-import { rhythm } from '../utils/typography'
-import BoldAd from './BoldAd';
+import css from './Layout.module.css'
+import LOGO from './logo.svg'
 
 export default class Layout extends React.Component {
-
   get avatar() {
     return (
       <img
         src={LOGO}
         alt="Rafael Quintanilha"
         style={{
-          marginBottom: 0, 
-          height: rhythm(2.5),
+          marginBottom: 0,
+          height: '86px',
         }}
       />
-    );
+    )
   }
 
   get menu() {
@@ -25,7 +22,7 @@ export default class Layout extends React.Component {
       <div className={css.menu}>
         <Link to="/about">What's this?</Link>
       </div>
-    );
+    )
   }
 
   get header() {
@@ -34,7 +31,7 @@ export default class Layout extends React.Component {
         <div className={css.title}>
           <Link
             style={{
-              textShadow: 'none', 
+              textShadow: 'none',
               backgroundImage: 'none',
             }}
             to={'/'}
@@ -44,7 +41,7 @@ export default class Layout extends React.Component {
         </div>
         {this.menu}
       </div>
-    );
+    )
   }
 
   render() {
@@ -53,6 +50,6 @@ export default class Layout extends React.Component {
         {this.header}
         {this.props.children}
       </div>
-    );
+    )
   }
 }

@@ -1,1 +1,2 @@
-import './src/utils/theme.css';
+import 'typeface-quicksand'
+import './src/utils/theme.css'

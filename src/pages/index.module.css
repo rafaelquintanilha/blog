@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  justify-content: space-between;
 }
 
 .posts_container > div:first-child {
@@ -35,15 +36,7 @@
 }
 
 .posts_container > div:not(:first-child) {
-  width: 50%;
-}
-
-.posts_container > div:not(:first-child):nth-child(odd) {
-  padding-left: 15px;
-}
-
-.posts_container > div:not(:first-child):nth-child(even) {
-  padding-right: 15px;
+  width: calc(50% - 15px);
 }
 
 .posts_container > div:last-child:nth-child(even) {

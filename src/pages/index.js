@@ -1,13 +1,11 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import { rhythm } from '../utils/typography'
 import 'flag-icon-css/css/flag-icon.css'
 import Footer from '../components/Footer'
 import css from './index.module.css'
 import Subscribe from '../components/Subscribe'
 import SEO from '../components/SEO'
-import BoldAd from '../components/BoldAd'
 
 export default class BlogIndex extends React.Component {
   constructor() {
@@ -55,7 +53,7 @@ export default class BlogIndex extends React.Component {
               const title = node.frontmatter.title || node.fields.slug
               return (
                 <div key={node.fields.slug}>
-                  <h3 style={{ marginBottom: rhythm(1 / 4) }}>
+                  <h3 style={{ marginBottom: '12px', marginTop: '60px' }}>
                     <Link className={css.link_title} to={node.fields.slug}>
                       {title}
                     </Link>
@@ -72,6 +70,7 @@ export default class BlogIndex extends React.Component {
                     <span>{node.timeToRead + ' min read'}</span>
                   </small>
                   <p
+                    style={{ marginTop: '8px' }}
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.spoiler,
                     }}

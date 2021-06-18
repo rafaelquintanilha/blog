@@ -23,7 +23,7 @@ function Subscribe() {
         }),
       })
       if (response.status >= 200 && response.status < 400) {
-        const json = await response.json()
+        await response.json()
         setSuccess('You are now subscribed 🎉')
       } else {
         const text = await response.text()

@@ -84,12 +84,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-remove-trailing-slashes`,
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
-    },
     `gatsby-plugin-twitter`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-sitemap`,
