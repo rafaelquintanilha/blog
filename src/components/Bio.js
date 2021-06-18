@@ -48,7 +48,11 @@ export default class Bio extends React.Component {
             LinkedIn
           </a>
           {' - '}
-          <a href="https://quantbrasil.com.br" target="_blank" rel="noopener">
+          <a
+            href="https://quantbrasil.com.br/?utm_source=blog&utm_medium=link&utm_campaign=blog"
+            target="_blank"
+            rel="noopener"
+          >
             QuantBrasil
           </a>
         </p>

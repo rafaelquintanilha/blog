@@ -136,9 +136,12 @@ export default class Sobre extends React.Component {
         </h4>
         <p>
           Para os interessados no mercado financeiro, também sou o criador e
-          editor da <a href="https://quantbrasil.com.br">QuantBrasil</a>, uma
-          plataforma para pesquisa e estudos de análises quantitativas. Dê uma
-          olhada se você é interessado em <em>Python</em>, <em>pandas</em> e{' '}
+          editor da{' '}
+          <a href="https://quantbrasil.com.br/?utm_source=blog&utm_medium=link&utm_campaign=blog">
+            QuantBrasil
+          </a>
+          , uma plataforma para pesquisa e estudos de análises quantitativas. Dê
+          uma olhada se você é interessado em <em>Python</em>, <em>pandas</em> e{' '}
           <em>DataScience</em> em geral.
         </p>
         <TwitterButton />

@@ -135,9 +135,12 @@ export default class About extends React.Component {
         </h4>
         <p>
           I am also the creator and editor of{' '}
-          <a href="https://quantbrasil.com.br">QuantBrasil</a>, a platform for
-          quantitative analysis research. Drop by if you are interested on{' '}
-          <em>Python</em>, <em>pandas</em> and <em>DataScience</em> in general.
+          <a href="https://quantbrasil.com.br/?utm_source=blog&utm_medium=link&utm_campaign=blog">
+            QuantBrasil
+          </a>
+          , a platform for quantitative analysis research. Drop by if you are
+          interested on <em>Python</em>, <em>pandas</em> and{' '}
+          <em>DataScience</em> in general.
         </p>
         <TwitterButton />
         <Subscribe />

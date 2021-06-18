@@ -25,7 +25,10 @@ export default class Footer extends React.Component {
           >
             <LinkedIn />
           </a>
-          <a href="https://quantbrasil.com.br/" title="QuantBrasil">
+          <a
+            href="https://quantbrasil.com.br/?utm_source=blog&utm_medium=link&utm_campaign=blog"
+            title="QuantBrasil"
+          >
             <QuantBrasil />
           </a>
         </div>
