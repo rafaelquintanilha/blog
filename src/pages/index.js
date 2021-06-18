@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import 'flag-icon-css/css/flag-icon.css'
 import Footer from '../components/Footer'
 import css from './index.module.css'
 import Subscribe from '../components/Subscribe'
 import SEO from '../components/SEO'
+import BR from '../assets/br.svg'
+import US from '../assets/us.svg'
 
 export default class BlogIndex extends React.Component {
   constructor() {
@@ -13,9 +14,15 @@ export default class BlogIndex extends React.Component {
     this.state = { filter: 'all' }
   }
 
-  getFlagCode(lang) {
-    if (lang === 'pt-br') return 'br'
-    if (lang === 'en-us') return 'us'
+  getFlag(lang) {
+    if (lang === 'pt-br')
+      return (
+        <BR style={{ width: '22px', height: '22px', marginRight: '8px' }} />
+      )
+    if (lang === 'en-us')
+      return (
+        <US style={{ width: '22px', height: '22px', marginRight: '8px' }} />
+      )
     return ''
   }
 
@@ -58,15 +65,16 @@ export default class BlogIndex extends React.Component {
                       {title}
                     </Link>
                   </h3>
-                  <small style={{ color: 'rgba(0,0,0,.54)' }}>
-                    <span
-                      style={{ width: '1em' }}
-                      className={`flag-icon flag-icon-${this.getFlagCode(
-                        node.frontmatter.lang
-                      )}`}
-                    />{' '}
+                  <small
+                    style={{
+                      color: 'rgba(0,0,0,.54)',
+                      display: 'flex',
+                      alignItems: 'center',
+                    }}
+                  >
+                    {this.getFlag(node.frontmatter.lang)}
                     {node.frontmatter.date}
-                    {' • '}
+                    <span style={{ margin: '0 8px' }}>•</span>
                     <span>{node.timeToRead + ' min read'}</span>
                   </small>
                   <p

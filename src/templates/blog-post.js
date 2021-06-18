@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import 'katex/dist/katex.min.css'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import Subscribe from '../components/Subscribe'

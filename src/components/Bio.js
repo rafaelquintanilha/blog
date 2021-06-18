@@ -1,6 +1,5 @@
 import React from 'react'
 import profilePic from './avatar.jpeg'
-
 export default class Bio extends React.Component {
   render() {
     return (
