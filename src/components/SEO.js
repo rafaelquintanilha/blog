@@ -26,6 +26,7 @@ function SEO({
               twitter
             }
             image
+            fullImage
           }
         }
       }

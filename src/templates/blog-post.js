@@ -17,7 +17,7 @@ class BlogPostTemplate extends React.Component {
       <Layout>
         <SEO
           slug={slug}
-          type="website"
+          type="article"
           description={post.frontmatter.spoiler}
           title={post.frontmatter.title}
           canonical={post.frontmatter.canonical}
