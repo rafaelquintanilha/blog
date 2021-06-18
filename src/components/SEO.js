@@ -81,7 +81,7 @@ function SEO({ description, lang, meta, title, type, slug, canonical }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -101,7 +101,7 @@ function SEO({ description, lang, meta, title, type, slug, canonical }) {
         },
         {
           name: `twitter:image`,
-          content: metaImage,
+          content: twitterImage,
         },
       ].concat(meta)}
     >
