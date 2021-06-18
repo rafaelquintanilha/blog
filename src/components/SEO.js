@@ -101,7 +101,7 @@ function SEO({ description, lang, meta, title, type, slug, canonical }) {
         },
         {
           name: `twitter:image`,
-          content: twitterImage,
+          content: metaImage,
         },
       ].concat(meta)}
     >
