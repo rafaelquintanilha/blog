@@ -7,7 +7,6 @@ import Layout from '../components/Layout'
 import Subscribe from '../components/Subscribe'
 import TwitterButton from '../components/TwitterButton'
 import SEO from '../components/SEO'
-import BoldAd from '../components/BoldAd'
 
 class BlogPostTemplate extends React.Component {
   render() {

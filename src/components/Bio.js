@@ -49,14 +49,14 @@ export default class Bio extends React.Component {
           </a>
           {' - '}
           <a
-            href="https://www.linkedin.com/in/rafaelquintanilha/"
+            href="https://linkedin.com/in/rafaelquintanilha"
             target="_blank"
             rel="noopener"
           >
             LinkedIn
           </a>
           {' - '}
-          <a href="https://quantbrasil.com.br/" target="_blank" rel="noopener">
+          <a href="https://quantbrasil.com.br" target="_blank" rel="noopener">
             QuantBrasil
           </a>
         </p>

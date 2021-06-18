@@ -1,7 +1,7 @@
 ---
 title: Create a Serverless React Application
-date: "2019-07-31"
-lastReview: "2019-07-31"
+date: '2019-07-31'
+lastReview: '2019-07-31'
 spoiler: Let us understand what serverless really means, what's good about it and how you can take advantage of this architecture when building React apps.
 lang: en-us
 ---
@@ -10,7 +10,7 @@ lang: en-us
 
 In the world of software development, sometimes it might be hard to keep up with all the new trends and buzzwords. Developers love new things, so it’s understandable that preferences and approaches change over time, although it might happen overwhelmingly quick.
 
-One of the latest buzzwords to become popular is serverless. Somehow, it seems to be everywhere now, empowering the newest startups as well as the tech giants. But what is serverless after all? Is it worth knowing? 
+One of the latest buzzwords to become popular is serverless. Somehow, it seems to be everywhere now, empowering the newest startups as well as the tech giants. But what is serverless after all? Is it worth knowing?
 
 In this article, I will guide you through learning what serverless really is, the reason why it is so powerful and give you some heuristics to help you decide if serverless is well suited for your project. Later, we will build a simple serverless app using [Netlify](https://www.netlify.com/) and [ButterCMS](https://buttercms.com) to help you better understand the concepts explained throughout the text.
 
@@ -18,9 +18,9 @@ So what is serverless?
 
 ## The Serverless Architecture
 
-The first and maybe unexpected thing you need to know about serverless is that it *actually* has servers. Although it might sound contradictory, this is relieving once you need to keep your back-end separated from the client. Why do we call it “serverless” then?
+The first and maybe unexpected thing you need to know about serverless is that it _actually_ has servers. Although it might sound contradictory, this is relieving once you need to keep your back-end separated from the client. Why do we call it “serverless” then?
 
-The main difference between *serverless* and *serverful* applications is that for serverless applications, the servers management is taken care of for you. That means they still exist and function as designed, but you are free from the maintenance burden. By “burden” I mean managing availability, scalability, redundancy, uptime, orchestration, and all many other things that are important to modern web applications.
+The main difference between _serverless_ and _serverful_ applications is that for serverless applications, the servers management is taken care of for you. That means they still exist and function as designed, but you are free from the maintenance burden. By “burden” I mean managing availability, scalability, redundancy, uptime, orchestration, and all many other things that are important to modern web applications.
 
 Before digging deeper into our definition, let us first understand why serverless emerged in the first place.
 
@@ -28,9 +28,9 @@ Before digging deeper into our definition, let us first understand why serverles
 
 Not long ago, applications ran locally in private-owned data centers. This changed when cloud computing became popular, smashing costs and enabling developers and companies to move their infrastructure to the web and focus on their product instead. Companies such as Amazon specialized in developing reliable and distributed data centers that could be accessed anywhere in the world at the same time.
 
-Although this was a turning point for software development, it also brought a new set of problems to be solved ⁠— make sure the server is available at any time, scale up its capacity based on a surge in demand (and conversely scale down during peaceful times), dynamically allocate memory to the most sensitive processes, and so on. 
+Although this was a turning point for software development, it also brought a new set of problems to be solved ⁠— make sure the server is available at any time, scale up its capacity based on a surge in demand (and conversely scale down during peaceful times), dynamically allocate memory to the most sensitive processes, and so on.
 
-What in the beginning was supposed to be an infrastructure relief ended up becoming a headache once more. Therefore, the demand for headache-free software development was still around (and will likely stay around for as long as software developers live). How do you keep the improvements brought by cloud computing *without* spending too much time managing the cloud?
+What in the beginning was supposed to be an infrastructure relief ended up becoming a headache once more. Therefore, the demand for headache-free software development was still around (and will likely stay around for as long as software developers live). How do you keep the improvements brought by cloud computing _without_ spending too much time managing the cloud?
 
 The answer is, of course, serverless.
 
@@ -38,38 +38,38 @@ The answer is, of course, serverless.
 
 I mentioned that serverless architecture, in fact, use servers, but that they are concealed from you. This is still a loose definition, so it’s time to go deeper on this.
 
-The truth is that the definition of serverless varies a lot, some very technical, which can be confusing to newcomers. I’ll start by defining serverless as *architecture* or *methodology*. Finally, simply put, **serverless architecture is when you perform computations without having to think about machine resource allocation**. That is, the perks of cloud computing are seamlessly integrated into your workflow.
+The truth is that the definition of serverless varies a lot, some very technical, which can be confusing to newcomers. I’ll start by defining serverless as _architecture_ or _methodology_. Finally, simply put, **serverless architecture is when you perform computations without having to think about machine resource allocation**. That is, the perks of cloud computing are seamlessly integrated into your workflow.
 
 A more technical definition would be the following:
 
-> Serverless is an event-driven, ephemeral and stateless cloud-based architecture that dynamically allocates machine resources. 
+> Serverless is an event-driven, ephemeral and stateless cloud-based architecture that dynamically allocates machine resources.
 
 ### Lambda functions
 
-It all sounds too good to be true, but what is underneath a serverless architecture? The key is what we call a *lambda function*.
+It all sounds too good to be true, but what is underneath a serverless architecture? The key is what we call a _lambda function_.
 
-A *lambda function* is simply an anonymous function. Consider this JavaScript example:
+A _lambda function_ is simply an anonymous function. Consider this JavaScript example:
 
 ```js
 const multiplyBy = x => {
   return y => x * y
 }
 
-const triple = multiplyBy(3);
+const triple = multiplyBy(3)
 
-triple(10); // returns 30
+triple(10) // returns 30
 ```
 
 Notice that the original function, `multiplyBy`, returns an (anonymous) function. This function has the original value passed to `mutiplyBy` in its scope, what we call closure.
 
-In a serverless application, Lambda functions are invoked, perform the desired operation, and vanishes (that’s why serverless is *ephemeral*). This process is handled by the serverless provider, the most famous being [AWS Lambda](https://aws.amazon.com/lambda/). In the end, all you need to do is to write your function and let the provider call it when it’s time (hence, *event-based*) while doing all machine allocation. Because you don’t control the environment where your code is running, you need to assume a *stateless* function, i.e., there is no data persistence in between calls.
+In a serverless application, Lambda functions are invoked, perform the desired operation, and vanishes (that’s why serverless is _ephemeral_). This process is handled by the serverless provider, the most famous being [AWS Lambda](https://aws.amazon.com/lambda/). In the end, all you need to do is to write your function and let the provider call it when it’s time (hence, _event-based_) while doing all machine allocation. Because you don’t control the environment where your code is running, you need to assume a _stateless_ function, i.e., there is no data persistence in between calls.
 
 <figure>
   <img src="./lambda-function.png" alt="Lambda function diagram" />
   <figcaption>Lambda function diagram.</figcaption>
 </figure>
 
-So far we have finally learned *what* serverless is, conceptually and technically. Next, we will see *why* it is important.
+So far we have finally learned _what_ serverless is, conceptually and technically. Next, we will see _why_ it is important.
 
 ## Why Serverless? A look at what problems it solves
 
@@ -89,7 +89,7 @@ When you assume the responsibility of maintaining a server, you pay for the (vir
 
 ### Cloud lock-ins vs employee lock-ins
 
-If you want top-quality infrastructure management, you will need to assemble a DevOps team. That by itself will start to get expensive, but that’s not the worst of it. The main problem is that *changing personnel is way more difficult than changing a cloud provider*. So if you decide to switch technologies or are not satisfied with the current status of your company’s infrastructure, you will likely have a hard time. However, by adopting a serverless strategy, if you ever need to change providers you can expect a less painful experience.
+If you want top-quality infrastructure management, you will need to assemble a DevOps team. That by itself will start to get expensive, but that’s not the worst of it. The main problem is that _changing personnel is way more difficult than changing a cloud provider_. So if you decide to switch technologies or are not satisfied with the current status of your company’s infrastructure, you will likely have a hard time. However, by adopting a serverless strategy, if you ever need to change providers you can expect a less painful experience.
 
 ### Developer experience
 
@@ -97,9 +97,9 @@ It goes without saying that developers… well, like to develop. If you take fro
 
 Now that we have seen some of the benefits of a serverless approach, let us check when it might make sense to you.
 
-## When to use a Serverless Architecture? 
+## When to use a Serverless Architecture?
 
-Granted, serverless brings a lot of joy back to development and can be a pretty useful resource. However, if you want to adopt this methodology, it’s indispensable that you know why and if it does help you, and avoid just following the hype. 
+Granted, serverless brings a lot of joy back to development and can be a pretty useful resource. However, if you want to adopt this methodology, it’s indispensable that you know why and if it does help you, and avoid just following the hype.
 
 So, what are some indicators that serverless is a good choice for you?
 
@@ -109,7 +109,7 @@ Serverless diminishes your maintenance overhead because you do not own a server 
 
 ### Short computations
 
-Lambda functions are event-driven, which means that they are called when something happens (for example, when a user is created). Serverless providers will set a maximum time limit your function can run to avoid that a single call drains all machine’s memory.  This limit will vary from provider to provider, but it is important that you realize that if your application performs long and expensive computations, going serverless may be a problem for you.
+Lambda functions are event-driven, which means that they are called when something happens (for example, when a user is created). Serverless providers will set a maximum time limit your function can run to avoid that a single call drains all machine’s memory. This limit will vary from provider to provider, but it is important that you realize that if your application performs long and expensive computations, going serverless may be a problem for you.
 
 ### Small throughput
 
@@ -121,7 +121,7 @@ Because you don’t own the machine, you can’t assume you have access to any f
 
 ### Prototyping
 
-I avoided mentioning prototyping earlier because I wanted to emphasize that serverless is *production-ready*. Top companies are heavily investing in it and there is no reason you should avoid it because of production concerns. That being said, serverless is tremendously helpful when prototyping. Once a prototype or early stage application has no need to bother with auto scale, high throughput, and other infrastructure particularities, going serverless can definitely help you with your MVP.
+I avoided mentioning prototyping earlier because I wanted to emphasize that serverless is _production-ready_. Top companies are heavily investing in it and there is no reason you should avoid it because of production concerns. That being said, serverless is tremendously helpful when prototyping. Once a prototype or early stage application has no need to bother with auto scale, high throughput, and other infrastructure particularities, going serverless can definitely help you with your MVP.
 
 The topics above are good heuristics for you to ask when considering a serverless architecture. But aside from that, there are also plenty of common use-cases that benefit from being serverless:
 
@@ -199,7 +199,7 @@ netlify functions:create
 
 Many examples will display. They give you an overview of the many possibilities you have with serverless functions. For this example, select the `hello-world` option and name it `posts-by-month`. After that, go check the functions folder and notice that `posts-by-month/posts-by-month.js` is there.
 
-In order to test that everything is working as expected, run `netlify dev` and go to http://localhost:8888. The CRA default app will be there. But how do we test that our function is working? 
+In order to test that everything is working as expected, run `netlify dev` and go to http://localhost:8888. The CRA default app will be there. But how do we test that our function is working?
 
 Every function in Netlify is mapped to a specific URL `/.netlify/functions/<function name>`. Simply go to http://localhost:8888/.netlify/functions/posts-by-month and check that everything works.
 
@@ -209,17 +209,16 @@ Our `posts-by-month.js` function currently only returns some dummy data. But bef
 
 ```jsx
 exports.handler = async (event, context) => {
-
   try {
-    const subject = event.queryStringParameters.name || "World";
+    const subject = event.queryStringParameters.name || 'World'
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: `Hello ${subject}` })
-    };
+      body: JSON.stringify({ message: `Hello ${subject}` }),
+    }
   } catch (err) {
-    return { statusCode: 500, body: err.toString() };
+    return { statusCode: 500, body: err.toString() }
   }
-};
+}
 ```
 
 Every function needs to export a handler, which in this case is an async function (convenient once we will need to asynchronously fetch data from Butter’s API). This function needs to return an object containing a `statusCode` indicating the HTTP Status of the request and a body with the payload. You can learn more about the `handler` method in the [docs](https://www.netlify.com/docs/functions/#the-handler-method).
@@ -283,7 +282,7 @@ Our API is already achieving our simple requirements, but let’s improve it a b
 In the hello world example we paid little attention to this line:
 
 ```jsx
-const subject = event.queryStringParameters.name || "World";
+const subject = event.queryStringParameters.name || 'World'
 ```
 
 We can resort to a similar technique to allow the user to set the limit for the query.
@@ -301,14 +300,14 @@ exports.handler = async (event, context) => {
 That’s not the only way to pass data to our Lambda function. The body of the request can be accessed via:
 
 ```js
- const body = JSON.parse(event.body);
+const body = JSON.parse(event.body)
 ```
 
 ### Adding an environment variable
 
 Currently, we are hardcoding the API key in the code. This is less problematic than having it in the client, but it’s still suboptimal (you might forget and commit its value to Git, for example). One of the nicest features of Netlify Dev is that it automatically injects all env variables that you have set on Netlify in your local server.
 
-Open your site’s dashboard on Netlify and head to *Settings > Build & Deploy > Environment*. There, click on *Edit Variables* and add `BUTTER_API_KEY` as “Key” and your API key as “Value”. 
+Open your site’s dashboard on Netlify and head to _Settings > Build & Deploy > Environment_. There, click on _Edit Variables_ and add `BUTTER_API_KEY` as “Key” and your API key as “Value”.
 
 <figure>
   <img src="./netlify-env-panel.png" alt="Netlify environment panel" />
@@ -332,17 +331,17 @@ So far we have been testing our API directly in the browser. In order to exempli
 Delete everything in `src/App.js` and replace with:
 
 ```jsx
-import React from 'react';
+import React from 'react'
 
 function App() {
   return (
     <div>
       <button>Fetch API</button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 Next, install [isomorphic-fetch](https://www.npmjs.com/package/isomorphic-fetch):
@@ -354,64 +353,67 @@ npm install --save isomorphic-fetch
 We want to fetch data upon click and then render a table with the count for every month. If a month is not present, it means there were no posts. The full code is as follows:
 
 ```jsx
-import React, { useState } from 'react';
-import fetch from 'isomorphic-fetch';
+import React, { useState } from 'react'
+import fetch from 'isomorphic-fetch'
 
 const indexToMonth = index => {
   switch (index) {
     case 0:
-      return "Jan";
+      return 'Jan'
 
     // Omitted for brevity
 
     case 11:
-      return "Dec";
+      return 'Dec'
     default:
-      return "";
+      return ''
   }
 }
 
 function App() {
-
-  const [postsByMonth, setPostsByMonth] = useState(null);
+  const [postsByMonth, setPostsByMonth] = useState(null)
 
   const onClick = async () => {
     try {
-      const response = await fetch('/.netlify/functions/posts-by-month');
-      const json = await response.json();
-      setPostsByMonth(json);
+      const response = await fetch('/.netlify/functions/posts-by-month')
+      const json = await response.json()
+      setPostsByMonth(json)
     } catch (e) {
-      console.error(e);
+      console.error(e)
     }
   }
 
   return (
     <div>
       <button onClick={onClick}>Fetch API</button>
-      {postsByMonth && <table>
-        <thead>
-          <tr>
-            <th>Month</th>
-            <th>Posts</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Array(12).fill(0).map((el, i) => (
-            <tr key={i}>
-              <td>{indexToMonth(i)}</td>
-              <td>{postsByMonth[i] || 0}</td>
+      {postsByMonth && (
+        <table>
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Posts</th>
             </tr>
-          ))}
-        </tbody>
-      </table>}
+          </thead>
+          <tbody>
+            {Array(12)
+              .fill(0)
+              .map((el, i) => (
+                <tr key={i}>
+                  <td>{indexToMonth(i)}</td>
+                  <td>{postsByMonth[i] || 0}</td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      )}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
-All we do is to fetch data from our serverless API and save it with `useState`. If you are unfamiliar with React Hooks, check this [comprehensive article](/how-to-reuse-logic-with-react-hooks/) which will guide you through what is essential.
+All we do is to fetch data from our serverless API and save it with `useState`. If you are unfamiliar with React Hooks, check this [comprehensive article](/how-to-reuse-logic-with-react-hooks) which will guide you through what is essential.
 
 Then, we iterate over an array of size 12 (using ES6 [Array.fill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill) method) and render the correct value for each month. For brevity, I omitted the full extent of `indexToMonth`, but it should be pretty clear.
 
@@ -424,13 +426,13 @@ Go to http://localhost:8888/ and check your serverless-powered app!
 
 ## Final thoughts
 
-Serverless goes way beyond the current hype. It definitely removes development overhead and therefore has inherent value. In the book *Antifragile*, the author Nassim Nicholas Taleb warns us against “overhyping” and “neomania”. According to him:
+Serverless goes way beyond the current hype. It definitely removes development overhead and therefore has inherent value. In the book _Antifragile_, the author Nassim Nicholas Taleb warns us against “overhyping” and “neomania”. According to him:
 
 > “People acquire a new item, feel more satisfied after an initial boost, then rapidly revert to their baseline of well-being. So when you “upgrade”, you feel a boost of satisfaction with changes in technology. But then you get used to it and start hunting for the new new thing.”
 
-We can apply the same principle to software development. Yet, things *do* evolve and *do* get better. How can you tell what’s worthy from what’s purely *neomania*?
+We can apply the same principle to software development. Yet, things _do_ evolve and _do_ get better. How can you tell what’s worthy from what’s purely _neomania_?
 
-Taleb exemplifies with wall-to-wall windows. With today’s technology, we can avoid heavy and thick windows that helped our predecessors’ homes stay warm. That approaches humans to nature. In other words, when technology is used to *remove* a constraint imposed by *technology itself* in the past.
+Taleb exemplifies with wall-to-wall windows. With today’s technology, we can avoid heavy and thick windows that helped our predecessors’ homes stay warm. That approaches humans to nature. In other words, when technology is used to _remove_ a constraint imposed by _technology itself_ in the past.
 
 How can we relate that principle with what we learned today? Serverless connects us with what is really important (developing a great product) by removing the infrastructure burden that was important in the past but can be dispensable in some cases.
 

@@ -76,7 +76,7 @@ We will sketch a simple app, do a good ol’ smoke test to check that everything
 Consider the following CodeSandbox for our sample application:
 https://codesandbox.io/s/temperature-converter-mw7se
 
-Diving into the specifics of the code is beyond the scope of this article (check [“How to Reuse Logic With React Hooks](https://rafaelquintanilha.com/how-to-reuse-logic-with-react-hooks/)” for more context on how to use Hooks to create React applications).
+Diving into the specifics of the code is beyond the scope of this article (check [“How to Reuse Logic With React Hooks](https://rafaelquintanilha.com/how-to-reuse-logic-with-react-hooks)” for more context on how to use Hooks to create React applications).
 
 However, the code should be pretty straightforward. We are basically requiring user input and allowing them to convert from Celsius to Fahrenheit or vice-versa.
 
