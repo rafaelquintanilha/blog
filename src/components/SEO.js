@@ -44,6 +44,8 @@ function SEO({
 
   const metaImage = `${site.siteMetadata.siteUrl}${site.siteMetadata.image}`
 
+  const twitterImage = `${site.siteMetadata.siteUrl}${site.siteMetadata.fullImage}`
+
   return (
     <Helmet
       htmlAttributes={{ lang }}
@@ -79,18 +81,22 @@ function SEO({
         },
         {
           property: 'og:image:width',
-          content: `512`,
+          content: `1200`,
         },
         {
           property: 'og:image:height',
-          content: `512`,
+          content: `630`,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
+          content: site.siteMetadata.social.twitter,
+        },
+        {
+          name: `twitter:site`,
           content: site.siteMetadata.social.twitter,
         },
         {
@@ -103,7 +109,7 @@ function SEO({
         },
         {
           name: `twitter:image`,
-          content: metaImage,
+          content: twitterImage,
         },
       ]
         .concat(

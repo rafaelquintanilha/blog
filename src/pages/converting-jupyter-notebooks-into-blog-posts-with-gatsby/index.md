@@ -2,7 +2,7 @@
 title: Converting Jupyter Notebooks Into Blog Posts with Gatsby
 date: '2020-10-05'
 lastReview: '2020-10-30'
-spoiler: Lear how to bring your Data Science projects to life in easy steps.
+spoiler: Learn how to bring your Data Science projects to life in easy steps.
 lang: en-us
 canonical: https://blog.logrocket.com/converting-jupyter-notebooks-blog-posts-gatsby/
 ---

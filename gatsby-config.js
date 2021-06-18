@@ -9,6 +9,7 @@ module.exports = {
       twitter: '@webquintanilha',
     },
     image: '/logo-square.png',
+    fullImage: '/logo-twitter.png',
   },
   pathPrefix: '/',
   plugins: [
